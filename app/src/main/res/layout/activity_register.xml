@@ -7,14 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="30dp"
-    android:background="@drawable/imgloginbackground"
-    tools:context=".LoginActivity">
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Foodie App Bv/////" />
-
+    android:background="@drawable/imgregisterbackground"
+    tools:context=".RegisterActivity">
 
 </LinearLayout>
