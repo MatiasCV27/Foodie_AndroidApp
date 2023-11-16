@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_gravity="top"
-            app:srcCompat="@drawable/imglogotext" />
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

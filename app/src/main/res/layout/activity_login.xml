@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_gravity="top"
-            app:srcCompat="@drawable/imglogotext" />
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -72,12 +72,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:text="INICIAR SESIÓN"
             app:backgroundTint="@color/red"
-            app:strokeColor="@color/white"
-            android:text="INICIAR SESIÓN"/>
+            app:strokeColor="@color/white" />
 
     </LinearLayout>
 
