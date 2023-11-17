@@ -7,7 +7,6 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="30dp"
-    android:background="@drawable/imgloginbackground"
     tools:context=".LoginActivity">
 
 
@@ -21,8 +20,7 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="175dp"
-            android:layout_gravity="bottom"
-            app:srcCompat="@drawable/imglogofoodie" />
+            android:layout_gravity="bottom"/>
 
     </LinearLayout>
 
