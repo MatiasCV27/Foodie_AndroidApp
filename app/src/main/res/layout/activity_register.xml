@@ -7,7 +7,6 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="30dp"
-    android:background="@drawable/imgregisterbackground"
     tools:context=".RegisterActivity">
 
     <LinearLayout
@@ -22,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="175dp"
             app:srcCompat="@drawable/imglogofoodie" />
-
+      
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="25dp"
