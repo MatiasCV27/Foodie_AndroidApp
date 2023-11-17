@@ -50,4 +50,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation("com.google.android.material:material:1.10.0")
+    implementation("androidx.databinding:databinding-runtime:8.1.4")
 }

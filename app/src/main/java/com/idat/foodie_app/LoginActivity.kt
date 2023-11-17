@@ -2,6 +2,7 @@ package com.idat.foodie_app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.content.Intent
 import android.widget.Button
 import com.google.android.material.textfield.TextInputEditText
 
@@ -14,10 +15,9 @@ class LoginActivity : AppCompatActivity() {
         val txtEmail = findViewById<TextInputEditText>(R.id.txtEmail)
         val txtpassw = findViewById<TextInputEditText>(R.id.txtPassword)
 
-        //btnIniciarG.setOnClickListener(
-        //    if (txtEmail.getText().isEmpty() && txtpassw.getText().isEmpty()) {
-        //
-        //    }
-        //)
+        btnIniciarS.setOnClickListener {
+            val intent = Intent(this, MenuPrincipal::class.java)
+            startActivity(intent)
+        }
     }
 }

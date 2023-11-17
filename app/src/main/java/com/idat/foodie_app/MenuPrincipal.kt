@@ -3,6 +3,10 @@ package com.idat.foodie_app
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.idat.foodie_app.NavbarFragment.AccountFragment
+import com.idat.foodie_app.NavbarFragment.HomeFragment
+import com.idat.foodie_app.NavbarFragment.RestaurantFragment
+import com.idat.foodie_app.NavbarFragment.ShoppingCartFragment
 import com.idat.foodie_app.databinding.ActivityMenuPrincipalBinding
 
 
