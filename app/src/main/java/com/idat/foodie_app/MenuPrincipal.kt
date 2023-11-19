@@ -19,10 +19,22 @@ class MenuPrincipal : AppCompatActivity() {
         replaceFragment(HomeFragment())
         binding.BottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.Inicio -> replaceFragment(HomeFragment())
-                R.id.restaurantes -> replaceFragment(RestaurantFragment())
-                R.id.carrito -> replaceFragment(ShoppingCartFragment())
-                R.id.cuenta -> replaceFragment(AccountFragment())
+                R.id.Inicio -> {
+                    replaceFragment(HomeFragment())
+                    binding.txtMainFragmentName.text = "Selección de restaurantes"
+                }
+                R.id.restaurantes -> {
+                    replaceFragment(RestaurantFragment())
+                    binding.txtMainFragmentName.text = "Menú del restaurante"
+                }
+                R.id.carrito -> {
+                    replaceFragment(ShoppingCartFragment())
+                    binding.txtMainFragmentName.text = "Carrito de compras"
+                }
+                R.id.cuenta -> {
+                    replaceFragment(AccountFragment())
+                    binding.txtMainFragmentName.text = "Perfil de usuario"
+                }
                 else ->{
                 }
             }

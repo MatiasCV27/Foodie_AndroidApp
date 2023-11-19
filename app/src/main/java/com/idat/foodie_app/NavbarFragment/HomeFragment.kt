@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.google.android.material.chip.Chip
 import com.idat.foodie_app.MenuCatRestFragment.*
 import com.idat.foodie_app.MenuRestauranteFragment.*
@@ -38,41 +39,49 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val txtCatRest = view.findViewById<TextView>(R.id.txtListadoCatRest)
+
         val ft = parentFragmentManager.beginTransaction()
         ft.replace(R.id.frameMenuHome, CatRestTodoFragment())
         ft.commit()
 
         chipCatTodo.setOnClickListener {
+            txtCatRest.text = "Todos los restaurantes disponibles"
             parentFragmentManager.beginTransaction()
                 .replace(R.id.frameMenuHome, CatRestTodoFragment())
                 .commit()
         }
 
         chipCatPollos.setOnClickListener {
+            txtCatRest.text = "Restaurantes de Pollos"
             val ft = parentFragmentManager.beginTransaction()
             ft.replace(R.id.frameMenuHome, CatRestPollosFragment())
             ft.commit()
         }
 
         chipCatMariscos.setOnClickListener {
+            txtCatRest.text = "Restaurantes de Mariscos"
             val ft = parentFragmentManager.beginTransaction()
             ft.replace(R.id.frameMenuHome, CatRestMariscosFragment())
             ft.commit()
         }
 
         chipCatChifa.setOnClickListener {
+            txtCatRest.text = "Restaurantes de Chifas"
             val ft = parentFragmentManager.beginTransaction()
             ft.replace(R.id.frameMenuHome, CatRestChifaFragment())
             ft.commit()
         }
 
         chipCatParrillas.setOnClickListener {
+            txtCatRest.text = "Restaurantes de Parrillas"
             val ft = parentFragmentManager.beginTransaction()
             ft.replace(R.id.frameMenuHome, CatRestParrillasFragment())
             ft.commit()
         }
 
         chipCatTradicional.setOnClickListener {
+            txtCatRest.text = "Restaurantes Tradicionales"
             val ft = parentFragmentManager.beginTransaction()
             ft.replace(R.id.frameMenuHome, CatRestTradicionalFragment())
             ft.commit()

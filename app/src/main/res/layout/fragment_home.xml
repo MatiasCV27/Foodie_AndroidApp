@@ -102,13 +102,14 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/txtListadoCatRest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="Listado de..."
+            android:text="Todos los restaurantes disponibles"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:textSize="18dp"
+            android:gravity="center"/>
 
         <FrameLayout
             android:id="@+id/frameMenuHome"
