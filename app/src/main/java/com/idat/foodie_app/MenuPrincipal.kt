@@ -18,27 +18,16 @@ class MenuPrincipal : AppCompatActivity() {
         setContentView(binding.root)
         replaceFragment(HomeFragment())
         binding.BottomNavigationView.setOnItemSelectedListener {
-
             when(it.itemId){
-
                 R.id.Inicio -> replaceFragment(HomeFragment())
                 R.id.restaurantes -> replaceFragment(RestaurantFragment())
                 R.id.carrito -> replaceFragment(ShoppingCartFragment())
                 R.id.cuenta -> replaceFragment(AccountFragment())
-
                 else ->{
-
-
-
                 }
-
             }
-
             true
-
         }
-
-
     }
 
     private fun replaceFragment(fragment : Fragment){

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Button
+import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 
 class LoginActivity : AppCompatActivity() {
@@ -18,6 +19,13 @@ class LoginActivity : AppCompatActivity() {
         btnIniciarS.setOnClickListener {
             val intent = Intent(this, MenuPrincipal::class.java)
             startActivity(intent)
+        }
+
+        btnIniciarG.setOnClickListener{
+            val mensaje = "FOODIE: Usted a iniciado sesión con Google!"
+            val duracion = Toast.LENGTH_SHORT
+            val toast = Toast.makeText(applicationContext, mensaje, duracion)
+            toast.show()
         }
     }
 }
