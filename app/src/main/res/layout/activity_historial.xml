@@ -8,11 +8,11 @@
 
     <View
         android:id="@+id/fondotextfa"
-        android:layout_width="350dp"
-        android:layout_height="581dp"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@mipmap/imgfondouseraccess"
+        android:background="@mipmap/imgnotfoundcarrito"
         android:elevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -14,14 +14,14 @@
 
         <View
             android:id="@+id/rectangle_6"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_width="225dp"
+            android:layout_height="225dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:background="@mipmap/imgnotfoundcarrito"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:background="@mipmap/imgfondouseraccess"
-            android:elevation="4dp"
             app:layout_constraintBottom_toTopOf="@+id/btnHistorial"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
