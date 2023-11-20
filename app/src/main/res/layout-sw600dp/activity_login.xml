@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imgloginbackground"
+    android:background="@mipmap/imgloginbacklandscape"
     android:gravity="center"
     android:orientation="horizontal"
     android:padding="30dp"
@@ -22,13 +22,13 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_gravity="bottom"
-            app:srcCompat="@drawable/imglogofoodie" />
+            app:srcCompat="@mipmap/imglogofoodie" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="top"
-            app:srcCompat="@drawable/imglogotext" />
+            app:srcCompat="@mipmap/imglogotext" />
 
     </LinearLayout>
 
@@ -45,17 +45,19 @@
             android:layout_gravity="bottom"
             android:textColorHint="@color/black"
             app:hintTextColor="@color/black"
-            app:errorEnabled="true"
+            android:layout_marginBottom="5dp"
             app:boxBackgroundColor="#6FFFFFFF"
             app:boxStrokeColor="@color/red"
             app:boxStrokeWidth="2dp">
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email:"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textColorHighlight="#ff0000"/>
+                android:textColorHighlight="#ff0000"
+                android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -64,45 +66,61 @@
             android:layout_gravity="bottom"
             android:textColorHint="@color/black"
             app:hintTextColor="@color/black"
-            app:errorEnabled="true"
             app:boxBackgroundColor="#6FFFFFFF"
             app:boxStrokeColor="@color/red"
             app:boxStrokeWidth="2dp">
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Contraseña:"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textColorHighlight="#ff0000"/>
+                android:textColorHighlight="#ff0000"
+                android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
+            android:id="@+id/btnSesion"
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_gravity="bottom"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="INICIAR SESIÓN"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:backgroundTint="@color/red"
+            app:elevation="2dp"
             app:strokeColor="@color/white"
-            app:strokeWidth="2dp"
-            app:elevation="2dp" />
+            app:strokeWidth="2dp" />
 
         <Button
+            android:id="@+id/btnSGoogle"
             android:layout_width="match_parent"
             android:layout_height="62dp"
             android:layout_gravity="bottom"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="5dp"
             android:text="INICIAR SESIÓN CON GOOGLE"
             android:textColor="@color/white"
             android:textStyle="bold"
-            app:backgroundTint="@color/red950"
+            app:backgroundTint="@color/red900"
+            app:elevation="2dp"
             app:strokeColor="@color/white"
-            app:strokeWidth="2dp"
-            app:elevation="2dp" />
+            app:strokeWidth="2dp" />
 
+        <Button
+            android:id="@+id/btnRegistrase"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="5dp"
+            android:text="REGISTRARSE AQUI"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="@color/red950"
+            app:elevation="2dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp" />
     </LinearLayout>
 
 </LinearLayout>

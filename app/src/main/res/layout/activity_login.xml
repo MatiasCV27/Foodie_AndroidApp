@@ -21,12 +21,12 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="175dp"
-            app:srcCompat="@drawable/imglogofoodie" />
+            app:srcCompat="@mipmap/imglogofoodie" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="25dp"
-            app:srcCompat="@drawable/imglogotext" />
+            app:srcCompat="@mipmap/imglogotext" />
 
     </LinearLayout>
 
@@ -43,7 +43,7 @@
             android:layout_gravity="bottom"
             android:textColorHint="@color/black"
             app:hintTextColor="@color/black"
-            app:errorEnabled="true"
+            android:layout_marginBottom="16dp"
             app:boxBackgroundColor="#6FFFFFFF"
             app:boxStrokeColor="@color/red"
             app:boxStrokeWidth="2dp">
@@ -64,7 +64,6 @@
             android:layout_gravity="bottom"
             android:textColorHint="@color/black"
             app:hintTextColor="@color/black"
-            app:errorEnabled="true"
             app:boxBackgroundColor="#6FFFFFFF"
             app:boxStrokeColor="@color/red"
             app:boxStrokeWidth="2dp">
@@ -100,6 +99,20 @@
             android:layout_gravity="bottom"
             android:layout_marginTop="8dp"
             android:text="INICIAR SESIÓN CON GOOGLE"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="@color/red900"
+            app:elevation="2dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/btnRegistrase"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="8dp"
+            android:text="REGISTRARSE AQUI"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:backgroundTint="@color/red950"

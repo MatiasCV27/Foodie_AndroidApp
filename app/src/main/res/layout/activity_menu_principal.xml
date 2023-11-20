@@ -68,7 +68,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
@@ -78,8 +78,9 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/BottomNavigationView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/white"
+            app:labelVisibilityMode="unlabeled"
             app:itemIconTint="@color/red"
             app:itemTextColor="@color/red"
             app:menu="@menu/bottom_nav" />
