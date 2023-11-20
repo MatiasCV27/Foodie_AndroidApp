@@ -20,5 +20,10 @@
         <item name="cornerSize">16dp</item>
     </style>
 
+    <style name="CircularImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">90dp</item>
+    </style>
+
     <style name="Theme.Foodie_app" parent="Base.Theme.Foodie_app" />
 </resources>
