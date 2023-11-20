@@ -1,7 +1,9 @@
 package com.idat.foodie_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import com.idat.foodie_app.NavbarFragment.AccountFragment
 import com.idat.foodie_app.NavbarFragment.HomeFragment
@@ -40,15 +42,20 @@ class MenuPrincipal : AppCompatActivity() {
             }
             true
         }
+
+        val imgUser = findViewById<ImageView>(R.id.imgUserIconGlobal)
+
+        imgUser.setOnClickListener {
+            val fragment = AccountFragment()
+            replaceFragment(fragment)
+            binding.txtMainFragmentName.text = "Perfil de usuario"
+        }
     }
 
     private fun replaceFragment(fragment : Fragment){
-
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout,fragment)
         fragmentTransaction.commit()
-
-
     }
 }

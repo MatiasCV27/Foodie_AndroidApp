@@ -4,22 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#F1F0F0"
+    android:background="@color/white"
     tools:context=".NavbarFragment.RestaurantFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/white">
 
         <HorizontalScrollView
             android:id="@+id/hsvContenedorCG"
             android:layout_width="match_parent"
-            android:layout_height="48dp">
+            android:background="@color/white"
+            android:layout_height="48dp"
+            android:layout_gravity="center" >
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/chipGMRest"
                 android:layout_width="match_parent"
+
                 android:layout_height="match_parent">
 
                 <com.google.android.material.chip.Chip
@@ -65,7 +69,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="2dp">
+            android:layout_marginTop="2dp"
+            android:background="@color/white">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/outlinedTextField"
@@ -97,7 +102,8 @@
                 android:paddingLeft="8dp"
                 app:icon="@mipmap/imgbuscar"
                 app:iconSize="35dp"
-                app:iconTint="@color/black" />
+                app:iconTint="@color/black"
+                app:background="@color/white"/>
 
         </LinearLayout>
 
@@ -108,6 +114,7 @@
             android:layout_marginTop="2dp"
             android:text="Todo el menu disponible"
             android:textColor="@color/black"
+            android:background="@color/white"
             android:textSize="18dp"
             android:gravity="center"/>
 
@@ -115,7 +122,8 @@
             android:id="@+id/frameMenuRestaurant"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:background="@color/white"/>
 
     </LinearLayout>
 

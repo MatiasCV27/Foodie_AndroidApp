@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".MenuPrincipal">
 
     <androidx.cardview.widget.CardView
@@ -19,7 +20,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@color/white">
 
             <ImageView
                 android:layout_width="40dp"
@@ -48,6 +50,7 @@
                 android:textStyle="bold"/>
 
             <ImageView
+                android:id="@+id/imgUserIconGlobal"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:src="@mipmap/imguserfragment" />
@@ -61,7 +64,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp">
+        android:layout_marginEnd="15dp"
+        android:background="@color/white">
 
     </FrameLayout>
 

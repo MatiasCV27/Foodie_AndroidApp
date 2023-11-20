@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:text="Todo Fragment"
         android:textSize="26dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:background="@color/white"/>
 
 </FrameLayout>

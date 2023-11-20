@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.chip.Chip
@@ -41,6 +42,14 @@ class RestaurantFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val txtMenuRest = view.findViewById<TextView>(R.id.txtListadoMenuRest)
+        val btnBuscarPlato = view.findViewById<Button>(R.id.btnRestFind)
+
+        btnBuscarPlato.setOnClickListener{
+            val mensaje = "FOODIE: Esta funcionalidad de buscar un platillo estara disponible pronto!"
+            val duracion = Toast.LENGTH_SHORT
+            val toast = Toast.makeText(requireContext(), mensaje, duracion)
+            toast.show()
+        }
 
         val ft = parentFragmentManager.beginTransaction()
         ft.replace(R.id.frameMenuRestaurant, RestTodoFragment())
