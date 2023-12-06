@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,9 +24,16 @@ class RegisterActivity : AppCompatActivity() {
             if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "FOODIE: Los campos deben estar llenos para el registro", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
+            } else {
+                FirebaseAuth.getInstance()
+                    .createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        showMenuPrincipal(it.result?.user?.email ?: "", ProviderType.BASIC)
+                    } else {
+                        Toast.makeText(this, "FOODIE: Se ha producido un error autenticando al usuario", Toast.LENGTH_SHORT).show()
+                    }
+                }
             }
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
         }
 
         btnCancelarR.setOnClickListener {
@@ -39,5 +47,13 @@ class RegisterActivity : AppCompatActivity() {
             val toast = Toast.makeText(applicationContext, mensaje, duracion)
             toast.show()
         }
+    }
+
+    private fun showMenuPrincipal(email: String, provider: ProviderType) {
+        val menuPrincipalintent = Intent(this, MenuPrincipal::class.java).apply {
+            putExtra("email", email)
+            putExtra("provider", provider.name)
+        }
+        startActivity(menuPrincipalintent)
     }
 }

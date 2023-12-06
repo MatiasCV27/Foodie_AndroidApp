@@ -31,6 +31,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/authLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight=".5"
@@ -41,12 +42,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/black"
             android:layout_marginBottom="16dp"
+            android:textColorHint="@color/black"
             app:boxBackgroundColor="#6FFFFFFF"
             app:boxStrokeColor="@color/red"
-            app:boxStrokeWidth="2dp">
+            app:boxStrokeWidth="2dp"
+            app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtEmail"
@@ -63,10 +64,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:textColorHint="@color/black"
-            app:hintTextColor="@color/black"
             app:boxBackgroundColor="#6FFFFFFF"
             app:boxStrokeColor="@color/red"
-            app:boxStrokeWidth="2dp">
+            app:boxStrokeWidth="2dp"
+            app:hintTextColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtPassword"
@@ -99,12 +100,13 @@
             android:layout_height="62dp"
             android:layout_gravity="bottom"
             android:layout_marginTop="8dp"
+            android:drawableStart="@mipmap/imgicongoogle"
             android:text="INICIAR SESIÓN CON GOOGLE"
-            android:textColor="@color/white"
+            android:textColor="@color/red"
             android:textStyle="bold"
-            app:backgroundTint="@color/red900"
+            app:backgroundTint="@color/white"
             app:elevation="2dp"
-            app:strokeColor="@color/white"
+            app:strokeColor="@color/red"
             app:strokeWidth="2dp" />
 
         <Button

@@ -1,6 +1,7 @@
 package com.idat.foodie_app.NavbarFragment
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -13,6 +14,8 @@ import android.widget.Button
 import android.widget.ImageView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
+import com.idat.foodie_app.LoginActivity
 import com.idat.foodie_app.R
 import com.idat.foodie_app.UseerAccess.AyudaActivity
 import com.idat.foodie_app.UseerAccess.FaqActivity
@@ -43,6 +46,19 @@ class AccountFragment : Fragment() {
             val intent = Intent(activity, AyudaActivity::class.java)
             startActivity(intent)
         }
+        view.findViewById<Button>(R.id.btnCerrarSesion).setOnClickListener {
+
+            val context = requireActivity()
+            val prefs = context.getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+            prefs.clear()
+            prefs.apply()
+
+            FirebaseAuth.getInstance().signOut()
+
+            val intent = Intent(requireActivity(), LoginActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
     }
 

@@ -95,20 +95,6 @@
             app:strokeWidth="2dp" />
 
         <Button
-            android:id="@+id/btnRegGoogle"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="4dp"
-            android:text="REGISTRASE CON GOOGLE"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:backgroundTint="@color/red900"
-            app:elevation="2dp"
-            app:strokeColor="@color/white"
-            app:strokeWidth="2dp" />
-
-        <Button
             android:id="@+id/btnCancelarRegi"
             android:layout_width="match_parent"
             android:layout_height="62dp"

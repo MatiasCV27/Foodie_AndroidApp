@@ -1,5 +1,6 @@
 package com.idat.foodie_app
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +12,10 @@ import com.idat.foodie_app.NavbarFragment.RestaurantFragment
 import com.idat.foodie_app.NavbarFragment.ShoppingCartFragment
 import com.idat.foodie_app.databinding.ActivityMenuPrincipalBinding
 
+enum class ProviderType {
+    BASIC,
+    GOOGLE
+}
 
 class MenuPrincipal : AppCompatActivity() {
     private lateinit var binding : ActivityMenuPrincipalBinding
@@ -50,6 +55,17 @@ class MenuPrincipal : AppCompatActivity() {
             replaceFragment(fragment)
             binding.txtMainFragmentName.text = "Perfil de usuario"
         }
+
+        //Todo: Setup
+        val bundle = intent.extras
+        val email =  bundle?.getString("email")
+        val provider =  bundle?.getString("provider")
+
+        //Todo: Guardado de datos
+        val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+        prefs.putString("email", email)
+        prefs.putString("provider", provider)
+        prefs.apply()
     }
 
     private fun replaceFragment(fragment : Fragment){
@@ -58,4 +74,5 @@ class MenuPrincipal : AppCompatActivity() {
         fragmentTransaction.replace(R.id.frame_layout,fragment)
         fragmentTransaction.commit()
     }
+
 }

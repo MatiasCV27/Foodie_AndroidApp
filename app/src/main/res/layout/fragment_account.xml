@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F1F0F0"
+    android:orientation="vertical"
     tools:context=".NavbarFragment.AccountFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -12,13 +13,10 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         android:background="@color/black500"
         android:padding="5dp"
         android:src="@drawable/baseline_person_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/CircularImageView"
         app:strokeColor="@color/red700"
         app:strokeWidth="5dp" />
@@ -27,15 +25,9 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="60dp"
         android:clickable="true"
         android:contentDescription="TODO"
-        android:src="@drawable/baseline_photo_camera_24"
-        app:layout_constraintBottom_toTopOf="@+id/btnHistorial"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+        android:src="@drawable/baseline_photo_camera_24" />
 
     <Button
         android:id="@+id/btnHistorial"
@@ -45,16 +37,13 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="49dp"
         android:text="Historial de pedidos"
-        android:textSize="16dp"
         android:textColor="@color/white"
+        android:textSize="16dp"
         android:textStyle="bold"
         app:backgroundTint="@color/red"
         app:elevation="2dp"
         app:strokeColor="@color/white"
-        app:strokeWidth="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/btnAyuda"
@@ -64,16 +53,13 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="49dp"
         android:text="Ayuda"
-        android:textSize="16dp"
         android:textColor="@color/white"
+        android:textSize="16dp"
         android:textStyle="bold"
         app:backgroundTint="@color/red"
         app:elevation="2dp"
         app:strokeColor="@color/white"
-        app:strokeWidth="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFaq" />
+        app:strokeWidth="2dp" />
 
     <Button
         android:id="@+id/btnFaq"
@@ -83,15 +69,28 @@
         android:layout_marginTop="52dp"
         android:layout_marginEnd="49dp"
         android:text="FAQ"
-        android:textSize="16dp"
         android:textColor="@color/white"
+        android:textSize="16dp"
         android:textStyle="bold"
         app:backgroundTint="@color/red"
         app:elevation="2dp"
         app:strokeColor="@color/white"
-        app:strokeWidth="2dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHistorial" />
+        app:strokeWidth="2dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="313dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="49dp"
+        android:text="Cerrar Sesión"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/red"
+        app:elevation="2dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp" />
+
+</LinearLayout>
