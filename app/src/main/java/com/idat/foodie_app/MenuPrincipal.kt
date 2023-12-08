@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.idat.foodie_app.NavbarFragment.AccountFragment
 import com.idat.foodie_app.NavbarFragment.HomeFragment
@@ -23,6 +24,7 @@ class MenuPrincipal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMenuPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         replaceFragment(HomeFragment())
         binding.BottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
@@ -49,6 +51,10 @@ class MenuPrincipal : AppCompatActivity() {
         }
 
         val imgUser = findViewById<ImageView>(R.id.imgUserIconGlobal)
+        val setUserName = findViewById<TextView>(R.id.imgtextuserfrag)
+
+        val nombre = intent.getStringExtra("nombre")
+        setUserName.text = nombre
 
         imgUser.setOnClickListener {
             val fragment = AccountFragment()
@@ -73,6 +79,13 @@ class MenuPrincipal : AppCompatActivity() {
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout,fragment)
         fragmentTransaction.commit()
+    }
+
+    fun getBundleData(): Bundle? {
+        val intent = Intent()
+        val bundle = intent.extras
+        val provider = bundle?.getString("provider")
+        return bundle
     }
 
 }

@@ -49,6 +49,27 @@
             app:boxStrokeWidth="2dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtUserRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre de Usuario:"
+                android:textColor="@color/black"
+                android:textColorHighlight="#ff0000"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundColor="#6FFFFFFF"
+            app:boxStrokeColor="@color/red"
+            app:boxStrokeWidth="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtEmailRegis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

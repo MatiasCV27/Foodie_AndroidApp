@@ -12,9 +12,11 @@ import com.google.android.gms.common.api.ApiException
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
 
+    private val db = FirebaseFirestore.getInstance()
     private val GOOGLE_SIGN_IN = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +38,12 @@ class LoginActivity : AppCompatActivity() {
                 FirebaseAuth.getInstance()
                     .signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
+                        db.collection("users").document(email).get().addOnSuccessListener {
+                            val nombre = it.get("nombre") as String?
+                            val intent = Intent(this, MenuPrincipal::class.java)
+                            intent.putExtra("nombre", nombre)
+                            startActivity(intent)
+                        }
                         showMenuPrincipal(it.result?.user?.email ?: "", ProviderType.BASIC)
                     } else {
                         Toast.makeText(this, "FOODIE: Se ha producido un error autenticando al usuario", Toast.LENGTH_SHORT).show()
@@ -93,13 +101,25 @@ class LoginActivity : AppCompatActivity() {
                     FirebaseAuth.getInstance().signInWithCredential(credential)
                         .addOnCompleteListener {
                             if (it.isSuccessful) {
+                                val email = account.email ?: ""
+                                val username = account.displayName?.split(" ")?.get(0) ?: ""
+                                db.collection("users").document(email).set(
+                                    hashMapOf("email" to email,
+                                        "nombre" to username,
+                                        "proveedor" to ProviderType.GOOGLE)
+                                )
+                                db.collection("users").document(email).get().addOnSuccessListener {
+                                    val nombre = it.get("nombre") as String?
+                                    val intent = Intent(this, MenuPrincipal::class.java)
+                                    intent.putExtra("nombre", nombre)
+                                    startActivity(intent)
+                                }
                                 showMenuPrincipal(account.email ?: "", ProviderType.GOOGLE)
                             } else {
                                 Toast.makeText(this, "FOODIE: Se ha producido un error autenticando al usuario", Toast.LENGTH_SHORT).show()
                             }
                         }
                 }
-
             } catch (e: ApiException) {
                 Toast.makeText(this, "FOODIE: Se ha producido un error autenticando al usuario", Toast.LENGTH_SHORT).show()
             }
