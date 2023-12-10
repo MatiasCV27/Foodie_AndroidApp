@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-
     id("com.google.gms.google-services")
+    id("kotlin-kapt")
 }
 
 android {
@@ -60,5 +60,8 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-firestore:24.9.1")
+
+    //Todo: Glide
+
 
 }

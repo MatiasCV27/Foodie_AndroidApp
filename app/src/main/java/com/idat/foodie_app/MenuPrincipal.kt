@@ -12,6 +12,7 @@ import com.idat.foodie_app.NavbarFragment.HomeFragment
 import com.idat.foodie_app.NavbarFragment.RestaurantFragment
 import com.idat.foodie_app.NavbarFragment.ShoppingCartFragment
 import com.idat.foodie_app.databinding.ActivityMenuPrincipalBinding
+import com.idat.foodie_app.databinding.FragmentRestTodoBinding
 
 enum class ProviderType {
     BASIC,
@@ -47,6 +48,7 @@ class MenuPrincipal : AppCompatActivity() {
                 else ->{
                 }
             }
+
             true
         }
 
