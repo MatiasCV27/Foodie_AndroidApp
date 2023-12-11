@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,16 +8,18 @@
     android:background="#F1F0F0"
     android:orientation="vertical"
     tools:context=".NavbarFragment.AccountFragment">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="49dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView2"
-        android:layout_width="200dp"
+        android:layout_width="188dp"
         android:layout_height="200dp"
-        android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="25dp"
-        android:background="@color/black500"
+        android:layout_gravity="center"
+        android:background="@color/white"
         android:padding="5dp"
-        android:src="@drawable/baseline_person_24"
+        android:src="@mipmap/imglogofoodie"
         app:shapeAppearanceOverlay="@style/CircularImageView"
         app:strokeColor="@color/red700"
         app:strokeWidth="5dp" />
@@ -25,20 +28,27 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="-60dp"
+        android:layout_marginEnd="100dp"
         android:clickable="true"
         android:contentDescription="TODO"
         android:src="@drawable/baseline_photo_camera_24" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="49dp" />
+
     <Button
         android:id="@+id/btnHistorial"
-        android:layout_width="313dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="49dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Historial de pedidos"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/red"
         app:elevation="2dp"
@@ -47,14 +57,14 @@
 
     <Button
         android:id="@+id/btnAyuda"
-        android:layout_width="313dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="49dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:text="Ayuda"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/red"
         app:elevation="2dp"
@@ -63,34 +73,32 @@
 
     <Button
         android:id="@+id/btnFaq"
-        android:layout_width="313dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="49dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:text="FAQ"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/red"
         app:elevation="2dp"
         app:strokeColor="@color/white"
         app:strokeWidth="2dp" />
-
     <Button
         android:id="@+id/btnCerrarSesion"
-        android:layout_width="313dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="49dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:text="Cerrar Sesión"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/red"
         app:elevation="2dp"
         app:strokeColor="@color/white"
         app:strokeWidth="2dp" />
-
 </LinearLayout>
