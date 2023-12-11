@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="4dp"
     android:layout_marginEnd="4dp"
-    android:layout_marginTop="4dp">
+    android:layout_marginTop="4dp"
+    android:id="@+id/cardRestaurantes">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,11 +30,11 @@
             android:layout_height="wrap_content"
             android:hint="imagen"/>
 
-        <Button
-            android:id="@+id/btnIrPlatos"
+        <TextView
+            android:id="@+id/cardID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ver platos"/>
+            android:hint="imagen"/>
 
     </LinearLayout>
 

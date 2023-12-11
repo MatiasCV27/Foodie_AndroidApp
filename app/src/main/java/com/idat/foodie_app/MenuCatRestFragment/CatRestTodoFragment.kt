@@ -31,6 +31,7 @@ class CatRestTodoFragment : Fragment() {
 
         binding = FragmentCatRestTodoBinding.bind(view)
 
+
         return view
     }
 

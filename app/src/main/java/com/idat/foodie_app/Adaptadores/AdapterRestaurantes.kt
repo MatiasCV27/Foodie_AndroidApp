@@ -1,10 +1,19 @@
 package com.idat.foodie_app.Adaptadores
 
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.idat.foodie_app.MenuRestauranteFragment.RestEspecialidadFragment
+import com.idat.foodie_app.MenuRestauranteFragment.RestTodoFragment
 import com.idat.foodie_app.Modelos.Restaurantes
 import com.idat.foodie_app.R
 
@@ -24,8 +33,17 @@ class AdapterRestaurantes (private var items: ArrayList<Restaurantes>):
         holder.nombreV.text = item.nombre
         holder.descripcionV.text = item.descripcion
         holder.imagenV.text = item.imagen
+        holder.irPlatos.setOnClickListener{
+            holder.idV.text = item.idRest
+        }
 
     }
+
+    //fun onCLickItem(idRest: String) {
+    //    val ft = parentFragmentManager.beginTransaction()
+    //    ft.replace(R.id.frameMenuRestaurant, Rest())
+    //    ft.commit()
+    //}
 
     override fun getItemCount(): Int {
         return items.size
@@ -35,5 +53,7 @@ class AdapterRestaurantes (private var items: ArrayList<Restaurantes>):
         val nombreV: TextView = view.findViewById(R.id.cardNombre)
         val descripcionV: TextView = view.findViewById(R.id.cardDescripcion)
         val imagenV: TextView = view.findViewById(R.id.cardImagen)
+        val idV: TextView = view.findViewById(R.id.cardID)
+        val irPlatos: CardView = view.findViewById(R.id.cardRestaurantes)
     }
 }
