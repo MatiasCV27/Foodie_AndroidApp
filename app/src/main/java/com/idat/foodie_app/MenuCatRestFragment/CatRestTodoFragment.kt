@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.idat.foodie_app.Adaptadores.AdapterRestaurantes
+import com.idat.foodie_app.MenuRestauranteFragment.RestTodoFragment
 import com.idat.foodie_app.Modelos.Restaurantes
 import com.idat.foodie_app.R
 import com.idat.foodie_app.databinding.FragmentCatRestTodoBinding
@@ -40,6 +42,7 @@ class CatRestTodoFragment : Fragment() {
     private fun llamarRecyclerView() {
         restList = ArrayList()
         adapterRest = AdapterRestaurantes(restList)
+
         db.collection("restaurantes").get()
             .addOnSuccessListener { documents ->
                 for (document in documents) {
@@ -50,10 +53,12 @@ class CatRestTodoFragment : Fragment() {
                     wallItem.imagen = document["imagen"].toString()
                     restList.add(wallItem)
                 }
+
                 adapterRest.notifyDataSetChanged()
                 binding.rvRestTodo.adapter = adapterRest
                 binding.rvRestTodo.layoutManager = LinearLayoutManager(requireContext())
             }
+
     }
 
 }

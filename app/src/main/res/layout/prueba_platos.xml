@@ -12,28 +12,22 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/cardNombre"
+            android:id="@+id/cardPlatoNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre"/>
 
         <TextView
-            android:id="@+id/cardDescripcion"
+            android:id="@+id/cardPlatoPrecio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descripcion"/>
+            android:hint="Precio"/>
 
         <TextView
-            android:id="@+id/cardImagen"
+            android:id="@+id/cardPlatoImagen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="imagen"/>
-
-        <Button
-            android:id="@+id/btnIrPlatos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ver platos"/>
 
     </LinearLayout>
 
