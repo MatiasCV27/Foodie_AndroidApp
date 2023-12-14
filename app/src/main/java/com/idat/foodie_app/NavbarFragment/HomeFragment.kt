@@ -42,14 +42,6 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val txtCatRest = view.findViewById<TextView>(R.id.txtListadoCatRest)
-        val btnBuscarCatRest = view.findViewById<Button>(R.id.btnCatRestFind)
-
-        btnBuscarCatRest.setOnClickListener{
-            val mensaje = "FOODIE: Esta funcionalidad de buscar un restaurante estara disponible pronto!"
-            val duracion = Toast.LENGTH_SHORT
-            val toast = Toast.makeText(requireContext(), mensaje, duracion)
-            toast.show()
-        }
 
         val ft = parentFragmentManager.beginTransaction()
         ft.replace(R.id.frameMenuHome, CatRestTodoFragment())

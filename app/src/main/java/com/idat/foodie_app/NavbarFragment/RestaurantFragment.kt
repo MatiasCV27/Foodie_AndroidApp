@@ -1,5 +1,6 @@
 package com.idat.foodie_app.NavbarFragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,7 +11,10 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
+import com.google.android.material.textfield.TextInputEditText
+import com.idat.foodie_app.Adaptadores.AdapterRestaurantes
 import com.idat.foodie_app.MenuRestauranteFragment.*
+import com.idat.foodie_app.Modelos.Restaurantes
 import com.idat.foodie_app.R
 
 class RestaurantFragment : Fragment() {
@@ -42,14 +46,6 @@ class RestaurantFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val txtMenuRest = view.findViewById<TextView>(R.id.txtListadoMenuRest)
-        val btnBuscarPlato = view.findViewById<Button>(R.id.btnRestFind)
-
-        btnBuscarPlato.setOnClickListener{
-            val mensaje = "FOODIE: Esta funcionalidad de buscar un platillo estara disponible pronto!"
-            val duracion = Toast.LENGTH_SHORT
-            val toast = Toast.makeText(requireContext(), mensaje, duracion)
-            toast.show()
-        }
 
         val ft = parentFragmentManager.beginTransaction()
         ft.replace(R.id.frameMenuRestaurant, RestTodoFragment())

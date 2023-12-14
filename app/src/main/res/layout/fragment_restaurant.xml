@@ -65,48 +65,6 @@
             android:layout_height="5dp"
             android:src="@mipmap/imgbarrahr" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="2dp"
-            android:background="@color/white">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/outlinedTextField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:boxBackgroundColor="#6FFFFFFF"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidth="2dp"
-                app:hintTextColor="@color/black"
-                app:shapeAppearance="@style/CorneredShape">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="11dp"
-                    android:paddingBottom="11dp"
-                    android:hint="¿Qué comida estás buscando?"
-                    android:textColor="@color/black"
-                    android:textColorHint="@color/black" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <Button
-                android:id="@+id/btnRestFind"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:backgroundTint="@color/white"
-                android:contentDescription="Botón para bucar platillos"
-                android:paddingLeft="8dp"
-                app:icon="@mipmap/imgbuscar"
-                app:iconSize="35dp"
-                app:iconTint="@color/black"
-                app:background="@color/white"/>
-
-        </LinearLayout>
-
         <TextView
             android:id="@+id/txtListadoMenuRest"
             android:layout_width="match_parent"

@@ -10,6 +10,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.idat.foodie_app.Adaptadores.AdapterRestPlatos
 import com.idat.foodie_app.Modelos.RestPlatos
 import com.idat.foodie_app.R
+import com.idat.foodie_app.Utils.SelectedRestaurantId
 import com.idat.foodie_app.databinding.FragmentRestBebidasBinding
 import com.idat.foodie_app.databinding.FragmentRestPostresBinding
 
@@ -20,6 +21,7 @@ class RestPostresFragment : Fragment() {
     private lateinit var adapterRestPlatos: AdapterRestPlatos
     private lateinit var restPlatosList: ArrayList<RestPlatos>
     private lateinit var binding: FragmentRestPostresBinding
+    private val restSelected = SelectedRestaurantId.id
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,7 +46,7 @@ class RestPostresFragment : Fragment() {
             .addOnSuccessListener { documents ->
                 for (document in documents) {
                     val wallItem = document.toObject(RestPlatos::class.java)
-                    if (wallItem.categoria == "Postres") {
+                    if (document["idRest"] == restSelected && wallItem.categoria == "Postres") {
                         wallItem.idRest = document.id
                         wallItem.nombre = document["nombre"].toString()
                         wallItem.precio = document["precio"].toString().toDouble()

@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.idat.foodie_app.Modelos.RestPlatos
 import com.idat.foodie_app.R
+import com.idat.foodie_app.Utils.SelectedPlatosItems
 
 class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
     RecyclerView.Adapter<AdapterRestPlatos.ViewHolder>() {
@@ -23,6 +25,11 @@ class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
         holder.nombreV.text = item.nombre
         holder.preciov.text = item.precio.toString()
         holder.imagenV.text = item.imagen
+        holder.irCarrito.setOnClickListener {
+            SelectedPlatosItems.nombre = item.nombre
+            SelectedPlatosItems.precio = item.precio
+            SelectedPlatosItems.imagen = item.imagen
+        }
     }
 
     override fun getItemCount(): Int {
@@ -33,5 +40,7 @@ class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
         val nombreV: TextView = view.findViewById(R.id.cardPlatoNombre)
         val preciov: TextView = view.findViewById(R.id.cardPlatoPrecio)
         val imagenV: TextView = view.findViewById(R.id.cardPlatoImagen)
+        val irCarrito: CardView = view.findViewById(R.id.cardPlatos)
+
     }
 }

@@ -3,8 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MenuRestauranteFragment.RestTodoFragment">
 
+    <TextView
+        android:id="@+id/txtPruebaCosas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Prueba"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:textSize="18dp"
+        android:gravity="center"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRPlatosTodo"
