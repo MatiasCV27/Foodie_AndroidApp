@@ -33,10 +33,6 @@ class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
             SelectedPlatosItems.addItem(item.nombre, item.precio, item.imagen)
             SelectedPlatosItems.precioTotal += item.precio
 
-            //electedPlatosItems.nombre = item.nombre
-            //electedPlatosItems.precio = item.precio
-            //electedPlatosItems.imagen = item.nombre
-
         }
     }
 
