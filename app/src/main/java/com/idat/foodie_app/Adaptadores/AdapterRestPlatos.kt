@@ -10,8 +10,11 @@ import com.idat.foodie_app.Modelos.RestPlatos
 import com.idat.foodie_app.R
 import com.idat.foodie_app.Utils.SelectedPlatosItems
 
+
+
 class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
     RecyclerView.Adapter<AdapterRestPlatos.ViewHolder>() {
+
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -26,9 +29,14 @@ class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
         holder.preciov.text = item.precio.toString()
         holder.imagenV.text = item.imagen
         holder.irCarrito.setOnClickListener {
-            SelectedPlatosItems.nombre = item.nombre
-            SelectedPlatosItems.precio = item.precio
-            SelectedPlatosItems.imagen = item.imagen
+
+            SelectedPlatosItems.addItem(item.nombre, item.precio, item.imagen)
+            SelectedPlatosItems.precioTotal += item.precio
+
+            //electedPlatosItems.nombre = item.nombre
+            //electedPlatosItems.precio = item.precio
+            //electedPlatosItems.imagen = item.nombre
+
         }
     }
 
@@ -43,4 +51,5 @@ class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
         val irCarrito: CardView = view.findViewById(R.id.cardPlatos)
 
     }
+
 }
