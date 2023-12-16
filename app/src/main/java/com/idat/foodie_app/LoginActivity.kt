@@ -13,6 +13,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
+import com.idat.foodie_app.Utils.SelectedUserStats
 
 class LoginActivity : AppCompatActivity() {
 
@@ -109,6 +110,7 @@ class LoginActivity : AppCompatActivity() {
                                         "proveedor" to ProviderType.GOOGLE)
                                 )
                                 db.collection("users").document(email).get().addOnSuccessListener {
+                                    SelectedUserStats.emailUser = it.get("email") as String
                                     val nombre = it.get("nombre") as String?
                                     val intent = Intent(this, MenuPrincipal::class.java)
                                     intent.putExtra("nombre", nombre)
