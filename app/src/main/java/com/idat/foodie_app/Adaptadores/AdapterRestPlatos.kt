@@ -9,8 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.idat.foodie_app.Modelos.RestPlatos
 import com.idat.foodie_app.R
 import com.idat.foodie_app.Utils.SelectedPlatosItems
-
-
+import com.idat.foodie_app.Utils.SelectedUserStats
 
 class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
     RecyclerView.Adapter<AdapterRestPlatos.ViewHolder>() {
@@ -32,7 +31,8 @@ class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
 
             SelectedPlatosItems.addItem(item.nombre, item.precio, item.imagen)
             SelectedPlatosItems.precioTotal += item.precio
-
+            SelectedUserStats.nombres += item.nombre + ", "
+            SelectedUserStats.precios += item.precio.toString() + ", "
         }
     }
 
