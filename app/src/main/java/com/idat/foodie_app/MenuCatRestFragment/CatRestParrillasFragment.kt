@@ -1,5 +1,6 @@
 package com.idat.foodie_app.MenuCatRestFragment
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -33,10 +34,11 @@ class CatRestParrillasFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        llamarRecyclerView()
+        val contexto = requireContext()
+        llamarRecyclerView(contexto)
     }
 
-    private fun llamarRecyclerView() {
+    private fun llamarRecyclerView(contexto: Context) {
         restList = ArrayList()
         adapterRest = AdapterRestaurantes(restList)
         db.collection("restaurantes").get()
@@ -52,8 +54,11 @@ class CatRestParrillasFragment : Fragment() {
                     }
                 }
                 adapterRest.notifyDataSetChanged()
-                binding.rvRestParrillas.adapter = adapterRest
-                binding.rvRestParrillas.layoutManager = LinearLayoutManager(requireContext())
+
+                if (isAdded) {
+                    binding.rvRestParrillas.adapter = adapterRest
+                    binding.rvRestParrillas.layoutManager = LinearLayoutManager(contexto)
+                }
             }
     }
 
