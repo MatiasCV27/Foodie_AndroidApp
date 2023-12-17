@@ -34,7 +34,8 @@
                 android:hint="Nombre"
                 android:textColor="@color/black"
                 android:textSize="15.00sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:gravity="center"/>
 
             <TextView
                 android:id="@+id/cardPlatoPrecio"
@@ -43,7 +44,8 @@
                 android:hint="Precio"
                 android:textColor="#FF666666"
                 android:textSize="10.00dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:gravity="center"/>
         </LinearLayout>
 
     </LinearLayout>

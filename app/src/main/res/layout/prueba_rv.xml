@@ -37,7 +37,7 @@
                 android:textColor="@color/black"
                 android:textSize="15.00sp"
                 android:textStyle="bold"
-                android:gravity="center_vertical"/>
+                android:gravity="center"/>
 
             <TextView
                 android:id="@+id/cardDescripcion"
@@ -46,7 +46,8 @@
                 android:hint="Descripcion"
                 android:textColor="#FF666666"
                 android:textSize="10.00dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:gravity="center"/>
         </LinearLayout>
 
     </LinearLayout>
