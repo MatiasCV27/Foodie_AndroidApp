@@ -1,34 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ndroid="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardPlatos"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="4dp"
     android:layout_marginEnd="4dp"
     android:layout_marginTop="4dp"
-    android:id="@+id/cardPlatos">
+    android:elevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/cardPlatoNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre"/>
-
-        <TextView
-            android:id="@+id/cardPlatoPrecio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Precio"/>
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/cardPlatoImagen"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/imglogofoodie" /> <!-- Reemplaza "tu_imagen_predeterminada" con la imagen predeterminada -->
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="imagen"/>
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/cardPlatoNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:textColor="@color/black"
+                android:textSize="15.00sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/cardPlatoPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Precio"
+                android:textColor="#FF666666"
+                android:textSize="10.00dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
 
     </LinearLayout>
 

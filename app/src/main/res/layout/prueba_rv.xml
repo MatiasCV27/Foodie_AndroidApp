@@ -1,35 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardRestaurantes"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="4dp"
     android:layout_marginEnd="4dp"
     android:layout_marginTop="4dp"
-    android:id="@+id/cardRestaurantes">
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/fondort"
+    android:elevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/cardNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre"/>
-
-        <TextView
-            android:id="@+id/cardDescripcion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Descripcion"/>
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/cardImagen"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/imglogofoodie" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="imagen"/>
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:gravity="center_vertical"> <!-- Alinea verticalmente el contenido -->
+
+            <TextView
+                android:id="@+id/cardNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:textColor="@color/black"
+                android:textSize="15.00sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/cardDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Descripcion"
+                android:textColor="#FF666666"
+                android:textSize="10.00dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
 
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
+
