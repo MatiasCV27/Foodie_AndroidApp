@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="4dp"
@@ -7,29 +8,78 @@
     android:layout_marginTop="4dp"
     android:id="@+id/cardCarritoItem">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/cardCarNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre"/>
-
-        <TextView
-            android:id="@+id/cardCarPrecio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Precio"/>
+        <ProgressBar
+            android:id="@+id/progressbar_plus_minus"
+            android:layout_width="20.00dp"
+            android:layout_height="20.00dp"
+            android:indeterminateTint="#FF666666"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/cardCarImagen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="80.00dp"
+            android:layout_height="75.00dp"
+            android:layout_marginBottom="5dp"
+            android:src="@mipmap/imglogofoodie"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:hint="imagen"/>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/cardCarNombre"
+            android:layout_width="180.00dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8.00dp"
+            android:layout_marginTop="8.00dp"
+            android:text="Premium chair"
+            android:hint="Nombre"
+            android:textColor="@color/black"
+            android:textSize="15.00sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/cardCarImagen"
+            app:layout_constraintTop_toTopOf="@id/cardCarImagen" />
+
+
+        <TextView
+            android:id="@+id/cardCarPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Precio"
+            android:maxHeight="100.00dp"
+            android:text="$1600"
+            android:textColor="#FF666666"
+            android:textSize="10.00dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/cardCarNombre"
+            app:layout_constraintTop_toBottomOf="@id/cardCarNombre" />
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            tools:layout_editor_absoluteX="389dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <View
+
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1.30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
