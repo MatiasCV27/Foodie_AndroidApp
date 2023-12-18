@@ -61,7 +61,6 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-firestore:24.9.1")
 
-    //Todo: Glide
-
-
+    val versionPicasso = "2.71828"
+    implementation("com.squareup.picasso:picasso:$versionPicasso")
 }

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
+        <ImageView
             android:id="@+id/cardPlatoImagen"
             android:layout_width="150dp"
             android:layout_height="100dp"
