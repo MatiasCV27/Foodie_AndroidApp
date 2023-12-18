@@ -22,7 +22,7 @@ class RestSnacksFragment : Fragment() {
     private lateinit var adapterRestPlatos: AdapterRestPlatos
     private lateinit var restPlatosList: ArrayList<RestPlatos>
     private lateinit var binding: FragmentRestSnacksBinding
-    private val restSelected = SelectedRestaurantId.id
+    private var restSelected = SelectedRestaurantId.id
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,6 +48,13 @@ class RestSnacksFragment : Fragment() {
             .addOnSuccessListener { documents ->
                 for (document in documents) {
                     val wallItem = document.toObject(RestPlatos::class.java)
+
+                    if (restSelected.equals("R0006") || restSelected.equals("R00011")) restSelected = "R0001"
+                    else if (restSelected.equals("R0007") || restSelected.equals("R0012")) restSelected = "R0002"
+                    else if (restSelected.equals("R0008") || restSelected.equals("R0013")) restSelected = "R0003"
+                    else if (restSelected.equals("R0009") || restSelected.equals("R0014")) restSelected = "R0004"
+                    else if (restSelected.equals("R0010") || restSelected.equals("R0015")) restSelected = "R0005"
+
                     if (document["idRest"] == restSelected && wallItem.categoria == "Snacks") {
                         wallItem.idRest = document.id
                         wallItem.nombre = document["nombre"].toString()
