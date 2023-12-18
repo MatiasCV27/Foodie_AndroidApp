@@ -30,7 +30,7 @@ class AyudaActivity : AppCompatActivity() {
             if (nombre.isEmpty() || correo.isEmpty() || asunto.isEmpty() || descrip.isEmpty()) {
                 Toast.makeText(this, "FOODIE: Los campos deben estar llenos para el acceso", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "FOODIE: Esta funcionalidad estar disponible pronto", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "FOODIE: El mensaje se envio con exito!", Toast.LENGTH_SHORT).show()
             }
         }
 

@@ -6,29 +6,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
+    android:padding="16dp"
     tools:context=".UseerAccess.HistorialActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
         android:orientation="horizontal">
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/cerrarFaq"
-            android:layout_width="30dp"
-            android:layout_height="49dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/x" />
+            app:srcCompat="@drawable/x"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="70px"
-            android:layout_marginTop="19dp"
-            android:text="Historial de pedidos"
-            android:textColor="@color/black"></TextView>
+            android:text="Historial de Compras"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
 
     </LinearLayout>
 

@@ -5,6 +5,7 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     tools:context=".UseerAccess.AyudaActivity">
 
     <ImageView
@@ -147,7 +148,7 @@
             android:text="Enviar solicitud de ayuda"
             android:textColor="@color/white"
             android:textStyle="bold"
-            app:backgroundTint="@color/red"
+            app:backgroundTint="@color/red950"
             app:elevation="2dp"
             app:strokeColor="@color/white"
             app:strokeWidth="2dp" />
@@ -169,6 +170,7 @@
         android:layout_height="185dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/imglogofoodie"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
