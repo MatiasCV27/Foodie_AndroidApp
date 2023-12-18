@@ -1,5 +1,6 @@
 package com.idat.foodie_app.MenuRestauranteFragment
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -36,10 +37,11 @@ class RestBebidasFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        llamarRecyclerView()
+        val contexto = requireContext()
+        llamarRecyclerView(contexto)
     }
 
-    private fun llamarRecyclerView() {
+    private fun llamarRecyclerView(contexto: Context) {
         restPlatosList = ArrayList()
         adapterRestPlatos = AdapterRestPlatos(restPlatosList)
         db.collection("restPlatos").get()
@@ -55,8 +57,12 @@ class RestBebidasFragment : Fragment() {
                     }
                 }
                 adapterRestPlatos.notifyDataSetChanged()
-                binding.rvRBebidasTodo.adapter = adapterRestPlatos
-                binding.rvRBebidasTodo.layoutManager = LinearLayoutManager(requireContext())
+
+                if (isAdded) {
+                    binding.rvRBebidasTodo.adapter = adapterRestPlatos
+                    binding.rvRBebidasTodo.layoutManager = LinearLayoutManager(contexto)
+                }
+
             }
 
     }

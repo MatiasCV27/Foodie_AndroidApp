@@ -24,6 +24,7 @@
                 android:id="@+id/chipBMPrincipal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:background="@color/white">
 
                 <com.google.android.material.chip.Chip
@@ -63,14 +64,13 @@
             android:id="@+id/txtListadoCatRest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
             android:text="Todos los restaurantes disponibles"
             android:textColor="@color/black"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:textSize="18dp"
-            android:gravity="center"
-            android:background="@color/white"/>
+            android:textSize="18dp" />
 
         <FrameLayout
             android:id="@+id/frameMenuHome"

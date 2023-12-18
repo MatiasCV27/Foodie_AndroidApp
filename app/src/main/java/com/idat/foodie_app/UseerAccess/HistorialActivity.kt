@@ -36,9 +36,6 @@ class HistorialActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val cerrarFaq: ImageView = findViewById(R.id.cerrarFaq)
-        val setEmail = findViewById<TextView>(R.id.txtObtenerEmail)
-
-        setEmail.text = obtenerGmail
 
         cerrarFaq.setOnClickListener {
             finish()
