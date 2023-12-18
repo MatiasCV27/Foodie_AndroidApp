@@ -15,11 +15,22 @@ import android.widget.ImageView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.UploadTask
 import com.idat.foodie_app.LoginActivity
 import com.idat.foodie_app.R
 import com.idat.foodie_app.UseerAccess.AyudaActivity
 import com.idat.foodie_app.UseerAccess.FaqActivity
 import com.idat.foodie_app.UseerAccess.HistorialActivity
+import java.io.ByteArrayOutputStream
+//...//
+import com.bumptech.glide.Glide
+
+
 
 class AccountFragment : Fragment() {
 
@@ -27,6 +38,7 @@ class AccountFragment : Fragment() {
     private val TAKE_PHOTO_REQUEST = 2
     private lateinit var floatingActionButton: FloatingActionButton
     private lateinit var imageView2: ImageView
+    private lateinit var storageReference: StorageReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,6 +78,16 @@ class AccountFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         floatingActionButton = view.findViewById(R.id.floatingActionButton)
         imageView2 = view.findViewById(R.id.imageView2)
+        storageReference = FirebaseStorage.getInstance("gs://android-foodie-bf103.appspot.com").reference
+        val prefs = requireActivity().getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE)
+        val imageUrl = prefs.getString("profileImageUrl", null)
+
+        floatingActionButton.setOnClickListener {
+            showImageSourceDialog()
+        }
+        if (imageUrl != null) {
+            Glide.with(this).load(imageUrl).into(imageView2)
+        }
 
         floatingActionButton.setOnClickListener {
             showImageSourceDialog()
@@ -100,6 +122,41 @@ class AccountFragment : Fragment() {
         }
     }
 
+    private fun updateProfileImageUrl(uid: String, imageUrl: String) {
+        val databaseReference = FirebaseDatabase.getInstance().reference
+        val userRef = databaseReference.child("users").child(uid)
+        userRef.child("profileImageUrl").setValue(imageUrl)
+
+        val prefs = requireActivity().getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+        prefs.putString("profileImageUrl", imageUrl)
+        prefs.apply()
+    }
+
+    private fun uploadImageToStorage(imageBitmap: Bitmap) {
+        val uid = Firebase.auth.currentUser?.uid
+        if (uid != null) {
+            val imageRef = storageReference.child("profile_images/$uid.jpg")
+
+            val baos = ByteArrayOutputStream()
+            imageBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+            val data = baos.toByteArray()
+
+            val uploadTask: UploadTask = imageRef.putBytes(data)
+
+            uploadTask.addOnSuccessListener {
+                // Imagen subida con éxito, obtén la URL de descarga
+                imageRef.downloadUrl.addOnSuccessListener { downloadUri ->
+                    // Ahora, 'downloadUri' contiene la URL de descarga de la imagen
+                    // Puedes almacenar esta URL en Realtime Database
+                    val imageUrl = downloadUri.toString()
+                    updateProfileImageUrl(uid, imageUrl)
+                }
+            }.addOnFailureListener { exception ->
+                // Manejar el error
+            }
+        }
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         imageView2 = view?.findViewById(R.id.imageView2)!!
@@ -110,12 +167,24 @@ class AccountFragment : Fragment() {
                     if (data != null && data.data != null) {
                         val imageUri = data.data
                         imageView2.setImageURI(imageUri)
+
+                        // Obtén el Bitmap de la imagen seleccionada
+                        val imageBitmap = MediaStore.Images.Media.getBitmap(
+                            requireActivity().contentResolver,
+                            imageUri
+                        )
+
+                        // Sube la imagen al Storage y actualiza la URL en la base de datos
+                        uploadImageToStorage(imageBitmap)
                     }
                 }
                 TAKE_PHOTO_REQUEST -> {
                     val imageBitmap = data?.extras?.get("data") as Bitmap?
                     if (imageBitmap != null) {
                         imageView2.setImageBitmap(imageBitmap)
+
+                        // Sube la imagen al Storage y actualiza la URL en la base de datos
+                        uploadImageToStorage(imageBitmap)
                     }
                 }
             }
