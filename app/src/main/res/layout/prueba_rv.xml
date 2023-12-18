@@ -1,21 +1,24 @@
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardRestaurantes"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="4dp"
-    android:layout_marginEnd="4dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginBottom="4dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginStart="6dp"
+    android:layout_marginBottom="6dp"
+    android:layout_marginTop="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="12dp"
     android:background="@drawable/fondort"
     android:elevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:orientation="horizontal">
 
-        <TextView
+        <ImageView
             android:id="@+id/cardImagen"
             android:layout_width="150dp"
             android:layout_height="100dp"
@@ -24,10 +27,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
+            android:background="@color/white"
             android:padding="8dp"
-            android:gravity="center_vertical"> <!-- Alinea verticalmente el contenido -->
+            android:gravity="center_vertical">
 
             <TextView
                 android:id="@+id/cardNombre"
@@ -35,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Nombre"
                 android:textColor="@color/black"
+                android:textAlignment="center"
                 android:textSize="15.00sp"
                 android:textStyle="bold"
                 android:gravity="center"/>
@@ -43,11 +48,10 @@
                 android:id="@+id/cardDescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:hint="Descripcion"
-                android:textColor="#FF666666"
-                android:textSize="10.00dp"
-                android:textStyle="bold"
-                android:gravity="center"/>
+                android:textColor="#FF666666"/>
+          
         </LinearLayout>
 
     </LinearLayout>

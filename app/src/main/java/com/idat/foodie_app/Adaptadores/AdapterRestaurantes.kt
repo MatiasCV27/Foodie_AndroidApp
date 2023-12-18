@@ -1,14 +1,19 @@
 package com.idat.foodie_app.Adaptadores
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.idat.foodie_app.Modelos.Restaurantes
 import com.idat.foodie_app.R
 import com.idat.foodie_app.Utils.SelectedRestaurantId
+import com.squareup.picasso.Picasso
+import java.net.URL
 
 class AdapterRestaurantes (private var items: ArrayList<Restaurantes>):
     RecyclerView.Adapter<AdapterRestaurantes.ViewHolder>() {
@@ -25,7 +30,7 @@ class AdapterRestaurantes (private var items: ArrayList<Restaurantes>):
         val item = items[position]
         holder.nombreV.text = item.nombre
         holder.descripcionV.text = item.descripcion
-        holder.imagenV.text = item.imagen
+        Picasso.get().load(item.imagen).into(holder.imagenV)
         holder.irPlatos.setOnClickListener{
             SelectedRestaurantId.id = item.idRest
         }
@@ -38,7 +43,7 @@ class AdapterRestaurantes (private var items: ArrayList<Restaurantes>):
     class ViewHolder(view :View): RecyclerView.ViewHolder(view) {
         val nombreV: TextView = view.findViewById(R.id.cardNombre)
         val descripcionV: TextView = view.findViewById(R.id.cardDescripcion)
-        val imagenV: TextView = view.findViewById(R.id.cardImagen)
+        val imagenV: ImageView = view.findViewById(R.id.cardImagen)
         val irPlatos: CardView = view.findViewById(R.id.cardRestaurantes)
     }
 }

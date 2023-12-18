@@ -15,7 +15,7 @@ class AdapterHistorialItems (private var items: ArrayList<HistorialItems>):
         parent: ViewGroup,
         viewType: Int
     ): AdapterHistorialItems.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.prueba_historial, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.plantillla_historial, parent, false)
         return AdapterHistorialItems.ViewHolder(view)
     }
 

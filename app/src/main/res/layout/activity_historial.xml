@@ -32,18 +32,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/txtObtenerEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingEnd="10dp"
-        android:gravity="center"
-        android:text="email"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvHistorialItems"
         android:layout_width="match_parent"
