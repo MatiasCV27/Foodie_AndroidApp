@@ -32,6 +32,7 @@ import com.bumptech.glide.Glide
 
 
 
+
 class AccountFragment : Fragment() {
 
     private val PICK_IMAGE_REQUEST = 1
