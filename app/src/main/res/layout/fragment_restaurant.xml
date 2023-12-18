@@ -60,11 +60,6 @@
 
         </HorizontalScrollView>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:src="@mipmap/imgbarrahr" />
-
         <TextView
             android:id="@+id/txtListadoMenuRest"
             android:layout_width="match_parent"

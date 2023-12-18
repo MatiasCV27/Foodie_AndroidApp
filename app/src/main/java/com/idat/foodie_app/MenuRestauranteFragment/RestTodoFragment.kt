@@ -32,9 +32,6 @@ class RestTodoFragment : Fragment() {
 
         binding = FragmentRestTodoBinding.bind(view)
 
-        val pruebaIdRest = view.findViewById<TextView>(R.id.txtPruebaCosas)
-        pruebaIdRest.text = SelectedRestaurantId.id
-
         return view
     }
 

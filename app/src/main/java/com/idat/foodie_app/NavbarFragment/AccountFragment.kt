@@ -30,9 +30,6 @@ import java.io.ByteArrayOutputStream
 //...//
 import com.bumptech.glide.Glide
 
-
-
-
 class AccountFragment : Fragment() {
 
     private val PICK_IMAGE_REQUEST = 1
@@ -169,13 +166,11 @@ class AccountFragment : Fragment() {
                         val imageUri = data.data
                         imageView2.setImageURI(imageUri)
 
-                        // Obtén el Bitmap de la imagen seleccionada
                         val imageBitmap = MediaStore.Images.Media.getBitmap(
                             requireActivity().contentResolver,
                             imageUri
                         )
 
-                        // Sube la imagen al Storage y actualiza la URL en la base de datos
                         uploadImageToStorage(imageBitmap)
                     }
                 }
@@ -184,7 +179,6 @@ class AccountFragment : Fragment() {
                     if (imageBitmap != null) {
                         imageView2.setImageBitmap(imageBitmap)
 
-                        // Sube la imagen al Storage y actualiza la URL en la base de datos
                         uploadImageToStorage(imageBitmap)
                     }
                 }

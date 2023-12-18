@@ -62,7 +62,10 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-firestore:24.9.1")
-    implementation ("com.google.firebase:firebase-storage-ktx")
+    implementation("com.google.firebase:firebase-storage-ktx")
+
+    val versiondb = "20.0.3"
+    implementation("com.google.firebase:firebase-database:$versiondb")
 
     //Todo
     implementation ("com.github.bumptech.glide:glide:4.12.0")
