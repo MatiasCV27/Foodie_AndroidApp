@@ -58,7 +58,7 @@ class ShoppingCartFragment : Fragment() {
             val fechaActual = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date()
             )
 
-            db.collection("histPagos").add(
+            db.collection("pedidos").add(
                 hashMapOf("email" to obtenerGmail,
                 "fecha" to fechaActual,
                 "pTotal" to precioTotal.toString(),

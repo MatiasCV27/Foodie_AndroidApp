@@ -47,7 +47,7 @@ class HistorialActivity : AppCompatActivity() {
     private fun llamarRecyclerView() {
         historiaList = ArrayList()
         adapterHist = AdapterHistorialItems(historiaList)
-        db.collection("histPagos").get()
+        db.collection("pedidos").get()
             .addOnSuccessListener { documents ->
                 for (document in documents) {
                     val wallItem = document.toObject(HistorialItems::class.java)
