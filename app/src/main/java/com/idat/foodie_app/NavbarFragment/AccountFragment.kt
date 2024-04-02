@@ -29,6 +29,7 @@ import com.idat.foodie_app.UseerAccess.HistorialActivity
 import java.io.ByteArrayOutputStream
 //...//
 import com.bumptech.glide.Glide
+import com.idat.foodie_app.UseerAccess.InfoUserActivity
 
 class AccountFragment : Fragment() {
 
@@ -54,6 +55,10 @@ class AccountFragment : Fragment() {
         }
         view.findViewById<Button>(R.id.btnAyuda).setOnClickListener {
             val intent = Intent(activity, AyudaActivity::class.java)
+            startActivity(intent)
+        }
+        view.findViewById<Button>(R.id.btnInfoUser).setOnClickListener {
+            val intent = Intent(activity, InfoUserActivity::class.java)
             startActivity(intent)
         }
         view.findViewById<Button>(R.id.btnCerrarSesion).setOnClickListener {

@@ -34,4 +34,10 @@
     </style>
 
     <style name="Theme.Foodie_app" parent="Base.Theme.Foodie_app" />
+    <style name="Theme.Foodie_app.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Foodie_app.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Foodie_app.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
