@@ -8,169 +8,204 @@
     android:backgroundTint="@color/white"
     tools:context=".UseerAccess.AyudaActivity">
 
-    <ImageView
-        android:id="@+id/circleImageView"
-        android:layout_width="700dp"
-        android:layout_height="1061dp"
-        android:contentDescription="Red Circle"
-        android:src="@drawable/redcircle"
-        app:layout_constraintDimensionRatio="H,1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+            android:id="@+id/cerrarFaq"
+            android:layout_width="56dp"
+            android:layout_height="49dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/x"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="340dp"/>
+    <ImageView
+            android:id="@+id/imglogofoodie"
+            android:layout_width="35dp"
+            android:layout_height="90dp"
+            android:src="@mipmap/imglogofoodie"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+
+    <TextView
+            android:id="@+id/textFaq"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:text="Ayuda"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@id/imglogofoodie"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="28dp"/>
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="381dp"
-        android:layout_height="435dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="15dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/circleImageView">
+            android:id="@+id/linearLayout"
+            android:layout_width="381dp"
+            android:layout_height="560dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="12dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="112dp">
 
         <!-- ... Tus TextInputLayout y TextInputEditText aquí ... -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilNombreHelp"
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:textColorHint="@color/black"
-            app:boxBackgroundColor="#6FFFFFFF"
-            app:boxStrokeColor="@color/red"
-            app:boxStrokeWidth="2dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/tilCorreoHelp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtNombreHelp"
+        <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:hint="Nombre:"
                 android:textColor="@color/black"
-                android:textColorHighlight="#ff0000"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_account_circle_24"
+                android:text="Nombre"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombreHelp"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textColorHint="@color/black"
+                app:boxBackgroundColor="#6FFFFFFF"
+                app:boxStrokeColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/tilCorreoHelp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtNombreHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_border"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#ff0000"
+                    android:textStyle="bold"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilCorreoHelp"
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/black"
-            app:boxBackgroundColor="#6FFFFFFF"
-            app:boxStrokeColor="@color/red"
-            app:boxStrokeWidth="2dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/tilAsuntoHelp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtCorreoHelp"
+        <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:hint="Correo:"
                 android:textColor="@color/black"
-                android:textColorHighlight="#ff0000"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_baseline_mail_24"
+                android:text="Correo"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCorreoHelp"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                app:boxBackgroundColor="#6FFFFFFF"
+                app:boxStrokeColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/tilAsuntoHelp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCorreoHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_border"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#ff0000"
+                    android:textStyle="bold"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilAsuntoHelp"
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="16dp"
-            android:textColorHint="@color/black"
-            app:boxBackgroundColor="#6FFFFFFF"
-            app:boxStrokeColor="@color/red"
-            app:boxStrokeWidth="2dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/tilDescipHelp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtAsuntoHelp"
+        <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:hint="Asunto:"
                 android:textColor="@color/black"
-                android:textColorHighlight="#ff0000"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_baseline_announcement_24"
+                android:text="Asunto"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAsuntoHelp"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="16dp"
+                android:textColorHint="@color/black"
+                app:boxBackgroundColor="#6FFFFFFF"
+                app:boxStrokeColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/tilDescipHelp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtAsuntoHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_border"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#ff0000"
+                    android:textStyle="bold"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilDescipHelp"
-            android:layout_width="380dp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/black"
-            app:boxBackgroundColor="#6FFFFFFF"
-            app:boxStrokeColor="@color/red"
-            app:boxStrokeWidth="2dp"
-            app:hintTextColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/btnMandarAyuda"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtDescipHelp"
+        <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:hint="Descripción:"
                 android:textColor="@color/black"
-                android:textColorHighlight="#ff0000"
-                android:textStyle="bold" />
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_baseline_dehaze_24"
+                android:text="Descripción"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDescipHelp"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                app:boxBackgroundColor="#6FFFFFFF"
+                app:boxStrokeColor="@color/red"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/btnMandarAyuda"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtDescipHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="@drawable/custom_border"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#ff0000"
+                    android:textStyle="bold"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 
         <Button
-            android:id="@+id/btnMandarAyuda"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="30dp"
-            android:text="Enviar solicitud de ayuda"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:backgroundTint="@color/red950"
-            app:elevation="2dp"
-            app:strokeColor="@color/white"
-            app:strokeWidth="2dp" />
+                android:id="@+id/btnMandarAyuda"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="30dp"
+                android:text="Enviar solicitud de ayuda"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:backgroundTint="@color/red950"
+                app:elevation="2dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="2dp"/>
 
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/cerrarFaq"
-        android:layout_width="56dp"
-        android:layout_height="49dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/x" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="143dp"
-        android:layout_height="185dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@mipmap/imglogofoodie"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

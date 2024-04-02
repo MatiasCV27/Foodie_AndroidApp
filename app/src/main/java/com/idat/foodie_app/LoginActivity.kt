@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -25,9 +26,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         val btnIniciarS = findViewById<Button>(R.id.btnSesion)
         val btnIniciarG = findViewById<Button>(R.id.btnSGoogle)
-        val btnReistro = findViewById<Button>(R.id.btnRegistrase)
-        val txtEmail = findViewById<TextInputEditText>(R.id.txtEmail)
-        val txtpassw = findViewById<TextInputEditText>(R.id.txtPassword)
+        val btnRegistro = findViewById<Button>(R.id.btnRegistrase)
+        val txtEmail = findViewById<EditText>(R.id.txtEmail)
+        val txtpassw = findViewById<EditText>(R.id.txtPassword)
 
         btnIniciarS.setOnClickListener {
             val email = txtEmail.text.toString()
@@ -64,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
             startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
         }
 
-        btnReistro.setOnClickListener {
+        btnRegistro.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }

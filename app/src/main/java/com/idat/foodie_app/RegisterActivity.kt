@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
@@ -20,9 +21,9 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
         val btnReg = findViewById<Button>(R.id.btnRegister)
         val btnCancelarR = findViewById<Button>(R.id.btnCancelarRegi)
-        val txtEmailR = findViewById<TextInputEditText>(R.id.txtEmailRegis)
-        val txtpasswR = findViewById<TextInputEditText>(R.id.txtPasswordRegis)
-        val txtUserN = findViewById<TextInputEditText>(R.id.txtUserRegis)
+        val txtEmailR = findViewById<EditText>(R.id.txtEmailRegis)
+        val txtpasswR = findViewById<EditText>(R.id.txtPasswordRegis)
+        val txtUserN = findViewById<EditText>(R.id.txtUserRegis)
 
         btnReg.setOnClickListener {
             val email = txtEmailR.text.toString()

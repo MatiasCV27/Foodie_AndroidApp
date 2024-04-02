@@ -87,6 +87,23 @@
         app:elevation="2dp"
         app:strokeColor="@color/white"
         app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/btnInfoUser"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Información del usuario"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/red"
+        app:elevation="2dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp" />
+
     <Button
         android:id="@+id/btnCerrarSesion"
         android:layout_width="match_parent"
