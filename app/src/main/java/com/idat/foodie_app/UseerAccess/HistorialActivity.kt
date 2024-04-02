@@ -2,21 +2,14 @@ package com.idat.foodie_app.UseerAccess
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.idat.foodie_app.Adaptadores.AdapterHistorialItems
-import com.idat.foodie_app.Adaptadores.AdapterRestPlatos
-import com.idat.foodie_app.Adaptadores.AdapterRestaurantes
 import com.idat.foodie_app.Modelos.HistorialItems
-import com.idat.foodie_app.Modelos.RestPlatos
-import com.idat.foodie_app.Modelos.Restaurantes
 import com.idat.foodie_app.R
 import com.idat.foodie_app.Utils.SelectedUserStats
 import com.idat.foodie_app.databinding.ActivityHistorialBinding
-import com.idat.foodie_app.databinding.FragmentCatRestPollosBinding
 
 class HistorialActivity : AppCompatActivity() {
 
