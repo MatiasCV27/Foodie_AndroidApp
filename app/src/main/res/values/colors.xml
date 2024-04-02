@@ -16,6 +16,9 @@
     <color name="red800">#b10303</color>
     <color name="red900">#920a0a</color>
     <color name="red950">#500000</color>
+    <color name="fondo">#fff1f1</color>
+    <color name="bordes">#c80d0d</color>
+
 
     <!--Todo Escalas de negro. -->
     <color name="black200">#d1d1d1</color>

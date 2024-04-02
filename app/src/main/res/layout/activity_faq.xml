@@ -12,82 +12,132 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp">
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
+
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cerrarFaq"
-            app:srcCompat="@drawable/x"/>
+                android:id="@+id/imglogofoodie"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/imglogofoodie"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Preguntas Frecuentes"
-            android:textStyle="bold"
-            android:textSize="24dp"
-            android:textColor="@color/black"
-            android:textAlignment="center"/>
-
+                android:id="@+id/textFaq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAQ"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                app:layout_constraintStart_toEndOf="@id/imglogofoodie"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"/>
+        <ImageView
+                android:id="@+id/cerrarFaq"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/x"
+                app:layout_constraintTop_toBottomOf="@id/textFaq"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="200dp"
+        />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@drawable/border_background">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="12dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginBottom="6dp"
-            android:layout_marginTop="6dp"
-            android:background="@color/white"
+            app:cardElevation="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/fondo"
             android:elevation="4dp">
 
             <ScrollView
                 android:id="@+id/scrollView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:background="@drawable/border_background"
                 app:layout_constraintVertical_bias="0.896">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:text="\n
-        ¿Cómo realizar un pedido?\n\n
-        1. ¿Cómo hago un pedido en la aplicación?\n
-        - Abre la aplicación y navega por los restaurantes disponibles.\n
+        Realización de pagos:\n\n
+        1. ¿Cómo hago un pedido en la aplicación?\n\n
+        - Abre la aplicación y navega por los \n
+        restaurantes disponibles.\n
         - Selecciona el restaurante de tu elección.\n
-        - Explora el menú y agrega los elementos deseados a tu carrito.\n
+        - Explora el menú y agrega los elementos \n
+        deseados a tu carrito.\n
         - Revisa tu pedido y procede al pago.\n\n
-        2. ¿Puedo personalizar mi pedido?\n
-        - Sí, muchos restaurantes permiten personalizar los platos según tus preferencias. Al realizar un pedido, busca opciones de personalización en el menú.\n\n
+        2. ¿Puedo personalizar mi pedido?\n\n
+        - Sí, muchos restaurantes permiten \n
+        personalizar los platos según tus preferencias. \n
+        Al realizar un pedido, busca opciones de \n
+        personalización en el menú.\n\n
         Pagos y Facturación\n\n
-        3. ¿Qué métodos de pago aceptan?\n
-        - Aceptamos pagos mediante tarjetas de crédito, tarjetas de débito y servicios de pago en línea. Algunos restaurantes también ofrecen pago en efectivo a la entrega.\n\n
-        4. ¿Cómo aplico un código de descuento?\n
-        - En la pantalla de pago, hay un campo para ingresar códigos de descuento. Ingrese el código y verifique que el descuento se aplique antes de confirmar su pedido.\n\n
+        3. ¿Qué métodos de pago aceptan?\n\n
+        - Aceptamos pagos mediante tarjetas de \n
+        crédito, tarjetas de débito y servicios de pago \n
+        en línea. Algunos restaurantes también ofrecen \n
+         pago en efectivo a la entrega.\n\n
+        4. ¿Cómo aplico un código de descuento?\n\n
+        - En la pantalla de pago, hay un campo para \n
+        ingresar códigos de descuento. Ingrese el \n
+        código y verifique que el descuento se aplique \n
+        antes de confirmar su pedido.\n\n
         Entrega y Seguimiento\n\n
-        5. ¿Cuánto tiempo tarda en entregarse mi pedido?\n
-        - El tiempo de entrega varía según la ubicación y la hora del día. Después de realizar un pedido, recibirás actualizaciones en tiempo real sobre el estado de tu entrega.\n\n
-        6. ¿Cómo puedo rastrear mi pedido?\n
-        - Después de confirmar tu pedido, podrás rastrear el progreso en la sección 'Mis Pedidos' de la aplicación. También recibirás notificaciones sobre el estado del pedido.\n\n
+        5. ¿Cuánto tiempo tarda en entregarse mi \n
+        pedido?\n\n
+        - El tiempo de entrega varía según la ubicación \n
+         y la hora del día. Después de realizar un \n
+         pedido,recibirás actualizaciones en tiempo real \n
+         sobre el estado de tu entrega.\n\n
+        6. ¿Cómo puedo rastrear mi pedido?\n\n
+        - Después de confirmar tu pedido, podrás \n
+        rastrear el progreso en la sección 'Mis Pedidos' \n
+        de la aplicación. También recibirás \n
+        notificaciones sobre el estado del pedido.\n\n
         Problemas Comunes\n\n
-        7. ¿Qué hago si hay un problema con mi pedido?\n
-        - Si surge algún problema con tu pedido, como artículos faltantes o problemas con la calidad, ponte en contacto con nuestro servicio de atención al cliente a través de la sección 'Ayuda' en la aplicación.\n\n
-        8. ¿Cómo cancelo mi pedido?\n
-        - Puedes cancelar un pedido si aún no ha sido preparado. Ve a 'Mis Pedidos' y selecciona la opción de cancelar si está disponible. Ten en cuenta que algunos restaurantes tienen políticas de cancelación.\n\n
+        7. ¿Qué hago si hay un problema con mi \n
+        pedido?\n\n
+        - Si surge algún problema con tu pedido, como \n
+        artículos faltantes o problemas con la calidad, \n
+        ponte en contacto con nuestro servicio de \n
+        atención al cliente a través de la sección 'Ayuda' \n
+        en la aplicación.\n\n
+        8. ¿Cómo cancelo mi pedido?\n\n
+        - Puedes cancelar un pedido si aún no ha sido \n
+        preparado. Ve a 'Mis Pedidos' y selecciona \n
+        la opción de cancelar si está disponible. Ten en \n
+        cuenta que algunos restaurantes tienen \n
+        políticas de cancelación.\n\n
         Cuenta y Seguridad\n\n
-        9. ¿Cómo cambio mi dirección de entrega?\n
-        - Puedes actualizar tu dirección en la sección de 'Configuración' de la aplicación. Asegúrate de hacer esto antes de confirmar tu pedido.\n\n
-        10. ¿Mi información personal está segura?\n
-        - Sí, tomamos la seguridad de los datos muy en serio. Tu información personal y datos de pago se cifran y se almacenan de forma segura.\n" />
+        9. ¿Cómo cambio mi dirección de entrega?\n\n
+        - Puedes actualizar tu dirección en la sección \n
+        de 'Configuración' de la aplicación. Asegúrate \n
+        de hacer esto antes de confirmar tu pedido.\n\n
+        10. ¿Mi información personal está segura?\n\n
+        - Sí, tomamos la seguridad de los datos muy en \n
+        serio. Tu información personal y datos de pago \n
+        se cifran y se almacenan de forma segura.\n" />
             </ScrollView>
 
         </androidx.cardview.widget.CardView>
