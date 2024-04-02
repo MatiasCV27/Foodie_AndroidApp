@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/imgloginback"
     android:gravity="center"
-    android:background="@mipmap/imgregisterbackground"
     android:orientation="vertical"
     android:padding="30dp"
     tools:context=".RegisterActivity">
@@ -20,13 +20,17 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="175dp"
+            android:layout_height="150dp"
             app:srcCompat="@mipmap/imglogofoodie" />
-      
-        <ImageView
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            app:srcCompat="@mipmap/imglogotext" />
+            android:layout_height="50dp"
+            android:fontFamily="@font/rowdies_regular"
+            android:gravity="center"
+            android:text="FOODIE"
+            android:textColor="@color/red800"
+            android:textSize="30dp" />
 
     </LinearLayout>
 
@@ -37,94 +41,73 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+            android:id="@+id/txtUserRegis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/black"
-            android:layout_marginBottom="16dp"
-            app:boxBackgroundColor="#6FFFFFFF"
-            app:boxStrokeColor="@color/red"
-            app:boxStrokeWidth="2dp">
+            android:background="@drawable/back_edit_text_semiredondo"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/blinker_regular"
+            android:hint="Nombre de Usuario:"
+            android:inputType="textPersonName"
+            android:minHeight="50dp"
+            android:paddingStart="20dp"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtUserRegis"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nombre de Usuario:"
-                android:textColor="@color/black"
-                android:textColorHighlight="#ff0000"
-                android:textStyle="bold" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+            android:id="@+id/txtEmailRegis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/black"
-            android:layout_marginBottom="16dp"
-            app:boxBackgroundColor="#6FFFFFFF"
-            app:boxStrokeColor="@color/red"
-            app:boxStrokeWidth="2dp">
+            android:background="@drawable/back_edit_text_semiredondo"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/blinker_regular"
+            android:hint="Email:"
+            android:inputType="textEmailAddress"
+            android:minHeight="50dp"
+            android:paddingStart="20dp"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtEmailRegis"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email:"
-                android:textColor="@color/black"
-                android:textColorHighlight="#ff0000"
-                android:textStyle="bold" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+            android:id="@+id/txtPasswordRegis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:textColorHint="@color/black"
-            app:hintTextColor="@color/black"
-            app:boxBackgroundColor="#6FFFFFFF"
-            app:boxStrokeColor="@color/red"
-            app:boxStrokeWidth="2dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtPasswordRegis"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Contraseña:"
-                android:textColor="@color/black"
-                android:textColorHighlight="#ff0000"
-                android:textStyle="bold" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:background="@drawable/back_edit_text_semiredondo"
+            android:fontFamily="@font/blinker_regular"
+            android:hint="Contraseña:"
+            android:inputType="textPassword"
+            android:minHeight="50dp"
+            android:paddingStart="20dp"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
-            android:layout_height="62dp"
+            android:layout_height="58dp"
             android:layout_gravity="bottom"
-            android:layout_marginTop="30dp"
-            android:text="REGISTRARSE AHORA"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/rowdies_regular"
+            android:text="REGISTRARSE"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            app:backgroundTint="@color/red"
-            app:elevation="2dp"
-            app:strokeColor="@color/white"
-            app:strokeWidth="2dp" />
+            android:textSize="17dp"
+            app:backgroundTint="@color/red800"
+            app:strokeColor="@color/red950"
+            app:strokeWidth="2dp"/>
 
         <Button
             android:id="@+id/btnCancelarRegi"
-            android:layout_width="match_parent"
-            android:layout_height="62dp"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="8dp"
-            android:text="CANCELAR REGISTRO"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:backgroundTint="@color/red950"
-            app:elevation="2dp"
-            app:strokeColor="@color/white"
+            android:layout_width="120dp"
+            android:layout_height="58dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/rowdies_regular"
+            android:text="VOLVER"
+            android:textColor="@color/red800"
+            android:textSize="17dp"
+            app:backgroundTint="@color/white"
+            app:strokeColor="@color/red800"
             app:strokeWidth="2dp" />
     </LinearLayout>
 

@@ -3,7 +3,7 @@
     <style name="Base.Theme.Foodie_app" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimary">@color/red900</item>
     </style>
 
     <style name="CustomChip">
