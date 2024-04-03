@@ -69,7 +69,7 @@
             android:textSize="18dp"
             android:textStyle="bold"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSesion"
             android:layout_width="match_parent"
             android:layout_height="58dp"
@@ -81,9 +81,10 @@
             android:textSize="17dp"
             app:backgroundTint="@color/red800"
             app:strokeColor="@color/red950"
-            app:strokeWidth="2dp"/>
+            app:strokeWidth="2dp"
+            app:cornerRadius="15dp"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSGoogle"
             android:layout_width="match_parent"
             android:layout_height="58dp"
@@ -98,9 +99,10 @@
             android:textSize="17dp"
             app:backgroundTint="@color/white"
             app:strokeColor="@color/red800"
-            app:strokeWidth="2dp"/>
+            app:strokeWidth="2dp"
+            app:cornerRadius="15dp"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegistrase"
             android:layout_width="match_parent"
             android:layout_height="58dp"
@@ -112,7 +114,8 @@
             android:textSize="17dp"
             app:backgroundTint="@color/red950"
             app:strokeColor="@color/red800"
-            app:strokeWidth="2dp"/>
+            app:strokeWidth="2dp"
+            app:cornerRadius="15dp"/>
 
     </LinearLayout>
 
