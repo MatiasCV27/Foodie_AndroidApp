@@ -12,23 +12,32 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/cerrarFaq"
-            app:srcCompat="@drawable/x"/>
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@mipmap/imgviewlogo"/>
 
         <TextView
+            android:id="@+id/txtMainFragmentName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|start"
+            android:paddingStart="10dp"
+            android:textSize="20dp"
             android:text="Historial de Compras"
-            android:textStyle="bold"
-            android:textSize="24dp"
-            android:textColor="@color/black"
-            android:textAlignment="center"/>
+            android:textColor="#222222"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:id="@+id/cerrarFaq"
+            app:srcCompat="@drawable/x"/>
 
     </LinearLayout>
 
