@@ -10,44 +10,35 @@
     tools:context=".UseerAccess.FaqActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:orientation="horizontal">
-
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white">
 
         <ImageView
-                android:id="@+id/imglogofoodie"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:src="@mipmap/imglogofoodie"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"/>
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@mipmap/imgviewlogo"/>
 
         <TextView
-                android:id="@+id/textFaq"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FAQ"
-                android:textStyle="bold"
-                android:textSize="24sp"
-                android:textColor="@color/black"
-                android:textAlignment="center"
-                app:layout_constraintStart_toEndOf="@id/imglogofoodie"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"/>
-        <ImageView
-                android:id="@+id/cerrarFaq"
+                android:id="@+id/txtMainFragmentName"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                app:srcCompat="@drawable/x"
-                app:layout_constraintTop_toBottomOf="@id/textFaq"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginStart="200dp"
-        />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="10dp"
+                android:textSize="20dp"
+                android:text="Preguntas Frecuentes"
+                android:textColor="#222222"
+                android:textStyle="bold"/>
+
+        <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/cerrarFaq"
+                app:srcCompat="@drawable/x"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -58,13 +49,11 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="18dp"
             android:layout_marginEnd="18dp"
             android:layout_marginStart="18dp"
             android:layout_marginBottom="18dp"
             android:layout_marginTop="18dp"
-            android:background="@color/fondo"
-            android:elevation="4dp">
+            android:background="@color/fondo">
 
             <ScrollView
                 android:id="@+id/scrollView2"
