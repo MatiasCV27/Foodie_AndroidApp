@@ -10,7 +10,7 @@
     tools:context=".NavbarFragment.AccountFragment">
     <Space
         android:layout_width="match_parent"
-        android:layout_height="49dp" />
+        android:layout_height="54dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView2"
@@ -22,7 +22,7 @@
         android:src="@mipmap/imglogofoodie"
         app:shapeAppearanceOverlay="@style/CircularImageView"
         app:strokeColor="@color/red700"
-        app:strokeWidth="5dp" />
+        app:strokeWidth="2.5dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -31,93 +31,116 @@
         android:layout_gravity="end"
         android:layout_marginTop="-60dp"
         android:layout_marginEnd="100dp"
+        android:backgroundTint="@color/red700"
         android:clickable="true"
         android:contentDescription="TODO"
-        android:src="@drawable/baseline_photo_camera_24" />
-
+        android:src="@drawable/seleccion_foto" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="39dp" />
+        android:layout_height="54dp" />
 
-    <Button
-        android:id="@+id/btnHistorial"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="Historial de pedidos"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/red"
-        app:elevation="2dp"
-        app:strokeColor="@color/white"
-        app:strokeWidth="2dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#FFF1F1"
+        app:strokeWidth="2dp"
+        app:strokeColor="#FF2222"
+        android:padding="8dp">
 
-    <Button
-        android:id="@+id/btnAyuda"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Ayuda"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/red"
-        app:elevation="2dp"
-        app:strokeColor="@color/white"
-        app:strokeWidth="2dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:text="Historial de pedidos"
+            android:textColor="#081F32"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            app:cornerRadius="0dp"
+            android:drawableLeft="@drawable/baseline_dashboard_customize_24"
+            android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+            app:iconPadding="16dp"
+            app:backgroundTint="#FFF1F1"
+            app:elevation="2dp"
+            app:strokeColor="#FFF1F1"
+            app:strokeWidth="2dp" />
 
-    <Button
-        android:id="@+id/btnFaq"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="FAQ"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/red"
-        app:elevation="2dp"
-        app:strokeColor="@color/white"
-        app:strokeWidth="2dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFaq"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="76dp"
+            android:text="Preguntas Frecuentes"
+            android:textColor="#081F32"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            app:cornerRadius="0dp"
+            android:drawableLeft="@drawable/baseline_info_24"
+            android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+            app:iconPadding="16dp"
+            app:backgroundTint="#FFF1F1"
+            app:elevation="2dp"
+            app:strokeColor="#FFF1F1"
+            app:strokeWidth="2dp" />
 
-    <Button
-        android:id="@+id/btnInfoUser"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Información del usuario"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/red"
-        app:elevation="2dp"
-        app:strokeColor="@color/white"
-        app:strokeWidth="2dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnInfoUser"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="136dp"
+            android:text="Información de usuario"
+            android:textColor="#081F32"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            app:cornerRadius="0dp"
+            android:drawableLeft="@drawable/baseline_library_books_24"
+            android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+            app:iconPadding="16dp"
+            app:backgroundTint="#FFF1F1"
+            app:elevation="2dp"
+            app:strokeColor="#FFF1F1"
+            app:strokeWidth="2dp" />
 
-    <Button
-        android:id="@+id/btnCerrarSesion"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Cerrar Sesión"
-        android:textColor="@color/red"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:backgroundTint="@color/white"
-        app:elevation="2dp"
-        app:strokeColor="@color/red"
-        app:strokeWidth="2dp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAyuda"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="196dp"
+            android:text="Ayuda"
+            android:textColor="#081F32"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            app:cornerRadius="0dp"
+            android:drawableLeft="@drawable/baseline_question_mark_24"
+            android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+            app:iconPadding="16dp"
+            app:backgroundTint="#FFF1F1"
+            app:elevation="2dp"
+            app:strokeColor="#FFF1F1"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCerrarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="256dp"
+            android:layout_marginBottom="16dp"
+            android:text="Cerrar sesión"
+            android:textColor="#081F32"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            app:cornerRadius="0dp"
+            android:drawableLeft="@drawable/baseline_close_24"
+            android:drawableRight="@drawable/baseline_arrow_forward_ios_24"
+            app:iconPadding="16dp"
+            app:backgroundTint="#FFF1F1"
+            app:elevation="2dp"
+            app:strokeColor="#FFF1F1"
+            app:strokeWidth="2dp" />
+
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>
