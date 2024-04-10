@@ -6,49 +6,80 @@
     android:layout_marginStart="6dp"
     android:layout_marginBottom="12dp"
     android:layout_marginTop="6dp"
-    app:cardCornerRadius="8dp"
+    app:cardCornerRadius="10dp"
     app:cardElevation="12dp"
     android:elevation="4dp"
     android:id="@+id/cardCarritoItem">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/fondo_carrito2"
+        >
 
-        <ImageView
-            android:id="@+id/cardCarImagen"
-            android:layout_width="80.00dp"
-            android:layout_height="80.00dp"
-            android:src="@mipmap/imglogofoodie"
-            android:hint="imagen"/>
-
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:paddingEnd="0dp"
+                android:background="@drawable/fondo_carrito2"
+                >
+            <ImageView
+                    android:id="@+id/cardCarImagen"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:src="@mipmap/imglogofoodie"
+                    android:hint="imagen"
+            />
+            
+        </LinearLayout>
+        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="@color/white"
+            android:orientation="vertical"
+            android:background="@drawable/fondo_carrito"
             android:gravity="center_vertical">
 
             <TextView
                 android:id="@+id/cardCarNombre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="28dp"
                 android:hint="Nombre"
-                android:textStyle="bold"
-                android:layout_weight="1"
+                android:fontFamily="@font/blinker_regular"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:paddingStart="30dp"
+                android:paddingTop="5dp"
+                />
 
             <TextView
                 android:id="@+id/cardCarPrecio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Precio"
-                android:paddingEnd="25dp"
-                android:textAlignment="textEnd"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textColor="#550000"
+                android:paddingStart="30dp"/>
+            
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp">
+                
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/underlined_text"
+                        android:textColor="#FF0000"
+                        android:layout_gravity="center"
+                        android:paddingStart="30dp"
+                        
+                        />
+                
+            
+            
+            </LinearLayout>
 
         </LinearLayout>
 
