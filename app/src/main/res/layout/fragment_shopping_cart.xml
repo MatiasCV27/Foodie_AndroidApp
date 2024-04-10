@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
-    tools:context=".NavbarFragment.ShoppingCartFragment">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/white"
+              android:orientation="vertical"
+              tools:context=".NavbarFragment.ShoppingCartFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCarritosItems"
@@ -33,12 +33,17 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnPagarProductos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:text="Pagar"/>
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPagarProductos"
+            android:layout_width="281dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            app:cornerRadius="10dp"
+            app:strokeColor="@color/red950"
+            app:strokeWidth="1dp"
+            android:text="PAGAR"
+            android:fontFamily="@font/rowdies_regular"
+            android:textSize="18dp"/>
 
 </LinearLayout>
