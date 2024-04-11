@@ -37,7 +37,7 @@
                 android:paddingStart="10dp"
                 android:fontFamily="@font/rowdies_light"
                 android:textSize="20dp"
-                android:text="Historial de Compras"
+                android:text="Ayuda"
                 android:textColor="#222222"
                 android:textStyle="bold"/>
         <ImageView
@@ -94,14 +94,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:fontFamily="@font/rowdies_light"
-                android:drawableStart="@drawable/ic_baseline_mail_24"
-                android:text="Correo"/>
         <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilCorreoHelp"
                 android:layout_width="380dp"
@@ -115,14 +107,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtCorreoHelp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_border"
-                    android:textColor="@color/black"
-                    android:textColorHighlight="#ff0000"
-                    android:textStyle="bold"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Space
@@ -171,7 +155,7 @@
                 android:textSize="20dp"
                 android:fontFamily="@font/rowdies_light"
                 android:drawableStart="@drawable/ic_baseline_dehaze_24"
-                android:text="Descripción"/>
+                android:text="Mensaje"/>
 
         <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilDescipHelp"
