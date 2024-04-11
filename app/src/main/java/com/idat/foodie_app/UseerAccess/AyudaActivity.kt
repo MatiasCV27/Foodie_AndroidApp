@@ -11,32 +11,52 @@ import com.idat.foodie_app.MenuPrincipal
 import com.idat.foodie_app.R
 
 class AyudaActivity : AppCompatActivity() {
+
+    private lateinit var btnayuda: Button
+    private lateinit var nombre: TextInputEditText
+    private lateinit var asunto: TextInputEditText
+    private lateinit var mensaje: TextInputEditText
+
+    private val correoFijo = "FoodieSoport@gmail.com" // Correo electrónico fijo
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ayuda)
         val cerrarFaq: ImageView = findViewById(R.id.cerrarFaq)
-        val btnEnviarAyuda = findViewById<Button>(R.id.btnMandarAyuda)
-        val txtNombre = findViewById<TextInputEditText>(R.id.txtNombreHelp)
-        val txtCorreo = findViewById<TextInputEditText>(R.id.txtCorreoHelp)
-        val txtAsunto = findViewById<TextInputEditText>(R.id.txtAsuntoHelp)
-        val txtDescrip = findViewById<TextInputEditText>(R.id.txtDescipHelp)
+        btnayuda = findViewById(R.id.btnMandarAyuda)
+        nombre = findViewById(R.id.txtNombreHelp)
+        asunto = findViewById(R.id.txtAsuntoHelp)
+        mensaje = findViewById(R.id.txtDescipHelp)
 
-        btnEnviarAyuda.setOnClickListener {
-            val nombre = txtNombre.text.toString()
-            val correo = txtCorreo.text.toString()
-            val asunto = txtAsunto.text.toString()
-            val descrip = txtDescrip.text.toString()
+        btnayuda.setOnClickListener {
+            val nombreText = nombre.text.toString()
+            val asuntoText = asunto.text.toString()
+            val mensajeText = mensaje.text.toString()
 
-            if (nombre.isEmpty() || correo.isEmpty() || asunto.isEmpty() || descrip.isEmpty()) {
-                Toast.makeText(this, "FOODIE: Los campos deben estar llenos para el acceso", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "FOODIE: El mensaje se envio con exito!", Toast.LENGTH_SHORT).show()
+            when {
+                nombreText.isEmpty() -> {
+                    Toast.makeText(this, "Ingresa tu nombre", Toast.LENGTH_LONG).show()
+                }
+                asuntoText.isEmpty() -> {
+                    Toast.makeText(this, "Ingresa el asunto", Toast.LENGTH_LONG).show()
+                }
+                mensajeText.isEmpty() -> {
+                    Toast.makeText(this, "Ingresa un mensaje", Toast.LENGTH_LONG).show()
+                }
+                else -> {
+                    val intent = Intent(Intent.ACTION_SEND)
+                    intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(correoFijo))
+                    intent.putExtra(Intent.EXTRA_SUBJECT, asuntoText)
+                    intent.putExtra(Intent.EXTRA_TEXT, "Nombre: $nombreText\nMensaje: $mensajeText")
+                    intent.type = "message/rfc822"
+                    startActivity(Intent.createChooser(intent, "Elige un cliente de correo:"))
+                    finish()
+                }
             }
         }
 
         cerrarFaq.setOnClickListener {
             finish()
         }
-
     }
 }
