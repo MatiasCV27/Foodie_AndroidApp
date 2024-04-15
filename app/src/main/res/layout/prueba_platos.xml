@@ -59,20 +59,6 @@
                         android:layout_weight="1"
                         android:textColor="@color/black"
                         android:gravity="center"/>
-                
-                <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnDetalles"
-                        android:layout_width="wrap_content"
-                        android:layout_height="32dp"
-                        android:padding="1dp"
-                        android:text="Ver Detalles"
-                        android:textColor="@color/red800"
-                        android:textSize="10dp"
-                        android:backgroundTint="@color/white"
-                        app:strokeColor="@color/red800"
-                        app:strokeWidth="2dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="3dp"/>
             
             </LinearLayout>
             
