@@ -21,84 +21,74 @@
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="2dp"
-                android:paddingEnd="0dp"
-                android:background="@drawable/fondo_carrito2"
+                android:background="@color/white"
         >
             <ImageView
-                    android:id="@+id/cardPlatoImagen"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    android:src="@mipmap/imglogofoodie"
-                    android:hint="imagen"
-            />
-        
+                android:id="@+id/cardPlatoImagen"
+                android:layout_width="115dp"
+                android:layout_height="95dp"
+                android:src="@mipmap/imglogofoodie"
+                android:hint="imagen"
+                android:scaleType="centerCrop" />
+
         </LinearLayout>
-        
+
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/fondo_carrito"
-                >
-            
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="6dp"
+            android:gravity="center_vertical">
+
             <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="71dp"
-                    android:orientation="vertical"
-                    android:background="#FFF1F1"
-                    android:gravity="center_vertical"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="2dp">
-                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <TextView
-                        android:id="@+id/cardPlatoNombre"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Nombre"
-                        android:textStyle="bold"
-                        android:layout_weight="1"
-                        android:textColor="@color/black"
-                        android:gravity="center"/>
-            
+                    android:id="@+id/cardPlatoNombre"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|start"
+                    android:hint="Nombre"
+                    android:textStyle="bold"
+                    android:textColor="@color/red950"
+
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/cardPlatoDescripcion"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|start"
+                    android:hint="Descripción"
+                    android:textColor="#FF666666"
+                    />
             </LinearLayout>
-            
+
             <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="71dp"
-                    android:orientation="vertical"
-                    android:background="#FFF1F1"
-                    android:gravity="center_vertical"
-                    android:layout_marginStart="60dp"
-                    android:layout_marginTop="2dp">
-                
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="0.23"
+                android:orientation="vertical">
+
                 <TextView
-                        android:id="@+id/cardPlatoPrecio"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Precio"
-                        android:layout_weight="1"
-                        android:textColor="@color/black"
-                        android:gravity="center"/>
-                
-                <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnAgregar"
-                        android:layout_width="89dp"
-                        android:layout_height="32dp"
-                        android:padding="1dp"
-                        android:text="Agregar"
-                        android:textSize="10dp"
-                        android:textColor="@color/red800"
-                        android:backgroundTint="@color/white"
-                        app:strokeColor="@color/red800"
-                        app:strokeWidth="2dp"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="3dp"
-                />
-            
+                    android:id="@+id/cardPlatoPrecio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|start"
+                    android:hint="Precio"
+                    android:textColor="@color/black" />
             </LinearLayout>
-            
+
         </LinearLayout>
-    
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

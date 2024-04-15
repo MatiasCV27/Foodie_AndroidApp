@@ -31,19 +31,19 @@ class MenuPrincipal : AppCompatActivity() {
             when(it.itemId){
                 R.id.Inicio -> {
                     replaceFragment(HomeFragment())
-                    binding.txtMainFragmentName.text = "Selección de restaurantes"
+                    binding.txtMainFragmentName.text = "Selección de Restaurantes"
                 }
                 R.id.restaurantes -> {
                     replaceFragment(RestaurantFragment())
-                    binding.txtMainFragmentName.text = "Menú del restaurante"
+                    binding.txtMainFragmentName.text = "Menú del Restaurante"
                 }
                 R.id.carrito -> {
                     replaceFragment(ShoppingCartFragment())
-                    binding.txtMainFragmentName.text = "Carrito de compras"
+                    binding.txtMainFragmentName.text = "Carrito de Compras"
                 }
                 R.id.cuenta -> {
                     replaceFragment(AccountFragment())
-                    binding.txtMainFragmentName.text = "Perfil de usuario"
+                    binding.txtMainFragmentName.text = "Perfil de Usuario"
                 }
                 else ->{
                 }

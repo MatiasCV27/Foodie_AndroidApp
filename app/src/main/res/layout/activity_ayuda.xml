@@ -35,11 +35,10 @@
                 android:layout_weight="1"
                 android:gravity="center|start"
                 android:paddingStart="10dp"
-                android:fontFamily="@font/rowdies_light"
                 android:textSize="20dp"
+                android:textStyle="bold"
                 android:text="Ayuda"
-                android:textColor="#222222"
-                android:textStyle="bold"/>
+                android:textColor="#222222" />
         <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
@@ -49,8 +48,8 @@
 
     <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="381dp"
-            android:layout_height="630dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginEnd="16dp"
             android:gravity="center"
@@ -64,7 +63,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="18dp"
+                android:drawablePadding="8dp"
                 android:fontFamily="@font/rowdies_light"
                 android:drawableStart="@drawable/ic_account_circle_24"
                 android:text="Nombre"/>
@@ -118,8 +118,9 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:fontFamily="@font/rowdies_light"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:drawableStart="@drawable/ic_baseline_announcement_24"
+                android:drawablePadding="8dp"
                 android:text="Asunto"/>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -152,9 +153,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:fontFamily="@font/rowdies_light"
                 android:drawableStart="@drawable/ic_baseline_dehaze_24"
+                android:drawablePadding="8dp"
                 android:text="Mensaje"/>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -187,11 +189,12 @@
                 android:layout_height="62dp"
                 android:layout_gravity="bottom"
                 android:layout_marginTop="30dp"
-                android:text="Enviar solicitud de ayuda"
+                android:text="Enviar Solicitud de Ayuda"
                 app:cornerRadius="10dp"
                 android:textColor="@color/white"
-                android:textStyle="bold"
+                android:textSize="16dp"
                 app:backgroundTint="@color/red950"
+                android:fontFamily="@font/rowdies_light"
                 app:elevation="2dp"
                 app:strokeColor="@color/white"
                 app:strokeWidth="2dp"/>
