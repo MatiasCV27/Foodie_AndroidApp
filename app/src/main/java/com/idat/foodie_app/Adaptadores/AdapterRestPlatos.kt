@@ -15,7 +15,6 @@ import com.squareup.picasso.Picasso
 
 class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
     RecyclerView.Adapter<AdapterRestPlatos.ViewHolder>() {
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -41,7 +40,6 @@ class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
     override fun getItemCount(): Int {
         return items.size
     }
-
     class ViewHolder(view : View): RecyclerView.ViewHolder(view) {
         val nombreV: TextView = view.findViewById(R.id.cardPlatoNombre)
         val preciov: TextView = view.findViewById(R.id.cardPlatoPrecio)
