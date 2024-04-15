@@ -22,7 +22,7 @@ class RestBebidasFragment : Fragment() {
     private lateinit var adapterRestPlatos: AdapterRestPlatos
     private lateinit var restPlatosList: ArrayList<RestPlatos>
     private lateinit var binding: FragmentRestBebidasBinding
-    private var restSelected = SelectedRestaurantId.categoria
+    private var restSelected = SelectedRestaurantId.nombres
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
