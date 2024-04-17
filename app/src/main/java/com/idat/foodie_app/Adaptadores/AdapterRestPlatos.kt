@@ -15,7 +15,6 @@ import com.squareup.picasso.Picasso
 
 class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
     RecyclerView.Adapter<AdapterRestPlatos.ViewHolder>() {
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -28,6 +27,7 @@ class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
         val item = items[position]
         holder.nombreV.text = item.nombre
         holder.preciov.text = item.precio.toString()
+        holder.descripcionV.text = item.descripcion
         Picasso.get().load(item.imagen).into(holder.imagenV)
         holder.irCarrito.setOnClickListener {
 
@@ -41,9 +41,9 @@ class AdapterRestPlatos (private var items: ArrayList<RestPlatos>):
     override fun getItemCount(): Int {
         return items.size
     }
-
     class ViewHolder(view : View): RecyclerView.ViewHolder(view) {
         val nombreV: TextView = view.findViewById(R.id.cardPlatoNombre)
+        val descripcionV: TextView = view.findViewById(R.id.cardPlatoDescripcion)
         val preciov: TextView = view.findViewById(R.id.cardPlatoPrecio)
         val imagenV: ImageView = view.findViewById(R.id.cardPlatoImagen)
         val irCarrito: CardView = view.findViewById(R.id.cardPlatos)

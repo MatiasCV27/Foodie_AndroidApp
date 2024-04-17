@@ -29,32 +29,38 @@
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipCatTodo"
                     android:text="Todos"
-                    style="@style/CustomChip"/>
+                    style="@style/CustomChip"
+                    android:textColor="@color/red900"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipCatPollos"
                     style="@style/CustomChip"
-                    android:text="Pollos" />
+                    android:text="Pollos"
+                    android:textColor="@color/red900"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipCatMariscos"
                     style="@style/CustomChip"
-                    android:text="Mariscos" />
+                    android:text="Mariscos"
+                    android:textColor="@color/red900"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipCatChifa"
                     style="@style/CustomChip"
-                    android:text="Chifa" />
+                    android:text="Chifa"
+                    android:textColor="@color/red900"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipCatParrilla"
                     style="@style/CustomChip"
-                    android:text="Parrillas" />
+                    android:text="Parrillas"
+                    android:textColor="@color/red900"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipCatTradicional"
                     style="@style/CustomChip"
-                    android:text="Tradicional" />
+                    android:text="Tradicional"
+                    android:textColor="@color/red900"/>
 
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>

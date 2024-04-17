@@ -2,11 +2,13 @@ package com.idat.foodie_app.MenuRestauranteFragment
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import com.idat.foodie_app.Adaptadores.AdapterRestPlatos
@@ -22,7 +24,7 @@ class RestTodoFragment : Fragment() {
     private lateinit var adapterRestPlatos: AdapterRestPlatos
     private lateinit var restPlatosList: ArrayList<RestPlatos>
     private lateinit var binding: FragmentRestTodoBinding
-    private var restSelected = SelectedRestaurantId.id
+    private var restSelected = SelectedRestaurantId.nombres
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,31 +46,42 @@ class RestTodoFragment : Fragment() {
     private fun llamarRecyclerView(contexto: Context) {
         restPlatosList = ArrayList()
         adapterRestPlatos = AdapterRestPlatos(restPlatosList)
-        db.collection("restPlatos").get()
+
+        // Consulta Firestore solo para los platos del restaurante seleccionado
+        db.collection("restPlatos")
+            .whereEqualTo("categoria", restSelected) // Filtra por el nombre del restaurante seleccionado
+            .get()
             .addOnSuccessListener { documents ->
                 for (document in documents) {
                     val wallItem = document.toObject(RestPlatos::class.java)
 
-                    if (restSelected.equals("R0006") || restSelected.equals("R00011")) restSelected = "R0001"
-                    else if (restSelected.equals("R0007") || restSelected.equals("R0012")) restSelected = "R0002"
-                    else if (restSelected.equals("R0008") || restSelected.equals("R0013")) restSelected = "R0003"
-                    else if (restSelected.equals("R0009") || restSelected.equals("R0014")) restSelected = "R0004"
-                    else if (restSelected.equals("R0010") || restSelected.equals("R0015")) restSelected = "R0005"
-
-                    if (document["idRest"] == restSelected) {
-                        wallItem.nombre = document["nombre"].toString()
-                        wallItem.precio = document["precio"].toString().toDouble()
-                        wallItem.imagen = document["imagen"].toString()
-                        restPlatosList.add(wallItem)
+                    // Asigna los datos del documento al objeto RestPlatos
+                    wallItem.nombre = document["nombre"].toString()
+                    val precioValue = document.getDouble("precio")
+                    if (precioValue != null) {
+                        wallItem.precio = precioValue
+                    } else {
+                        wallItem.precio = 0.0
                     }
+                    wallItem.imagen = document["imagen"].toString()
+
+                    // Agrega el plato a la lista solo si pertenece al restaurante seleccionado
+                    restPlatosList.add(wallItem)
+
+                    // Agrega logs para verificar los datos obtenidos
+                    Log.d("PlatoObtenido", "Nombre: ${wallItem.nombre}, Precio: ${wallItem.precio}, Imagen: ${wallItem.imagen}")
                 }
                 adapterRestPlatos.notifyDataSetChanged()
 
+                // Configura el RecyclerView solo si el fragmento está añadido a la actividad
                 if (isAdded) {
                     binding.rvRPlatosTodo.adapter = adapterRestPlatos
                     binding.rvRPlatosTodo.layoutManager = LinearLayoutManager(contexto)
                 }
 
+                // Muestra un Toast indicando que se seleccionó un restaurante
+                val mensaje = "Seleccionaste $restSelected"
+                Toast.makeText(contexto, mensaje, Toast.LENGTH_SHORT).show()
             }
     }
 

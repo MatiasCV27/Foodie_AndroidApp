@@ -32,7 +32,7 @@ class AdapterRestaurantes (private var items: ArrayList<Restaurantes>):
         holder.descripcionV.text = item.descripcion
         Picasso.get().load(item.imagen).into(holder.imagenV)
         holder.irPlatos.setOnClickListener{
-            SelectedRestaurantId.id = item.idRest
+            SelectedRestaurantId.nombres = item.nombre
         }
     }
 

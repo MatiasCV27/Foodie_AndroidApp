@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:background="@color/white">
 
-        <HorizontalScrollView
+        <!--<HorizontalScrollView
             android:id="@+id/hsvContenedorCG"
             android:layout_width="match_parent"
             android:background="@color/white"
@@ -58,7 +58,7 @@
 
             </com.google.android.material.chip.ChipGroup>
 
-        </HorizontalScrollView>
+        </HorizontalScrollView>-->
 
         <TextView
             android:id="@+id/txtListadoMenuRest"

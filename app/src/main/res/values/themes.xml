@@ -9,9 +9,9 @@
     <style name="CustomChip">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">@color/red</item>
+        <item name="android:textColor">@color/red800</item>
         <item name="android:textSize">16dp</item>
-        <item name="chipStrokeColor">@color/red</item>
+        <item name="chipStrokeColor">@color/red800</item>
         <item name="chipStrokeWidth">2dp</item>
     </style>
 

@@ -22,7 +22,7 @@ class RestPostresFragment : Fragment() {
     private lateinit var adapterRestPlatos: AdapterRestPlatos
     private lateinit var restPlatosList: ArrayList<RestPlatos>
     private lateinit var binding: FragmentRestPostresBinding
-    private var restSelected = SelectedRestaurantId.id
+    private var restSelected = SelectedRestaurantId.nombres
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

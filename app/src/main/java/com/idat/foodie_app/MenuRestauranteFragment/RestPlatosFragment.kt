@@ -22,7 +22,7 @@ class RestPlatosFragment : Fragment() {
     private lateinit var adapterRestPlatos: AdapterRestPlatos
     private lateinit var restPlatosList: ArrayList<RestPlatos>
     private lateinit var binding: FragmentRestPlatosBinding
-    private var restSelected = SelectedRestaurantId.id
+    private var restSelected = SelectedRestaurantId.nombres
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -58,6 +58,7 @@ class RestPlatosFragment : Fragment() {
                     if (document["idRest"] == restSelected && wallItem.categoria == "Platos") {
                         wallItem.idRest = document.id
                         wallItem.nombre = document["nombre"].toString()
+                        wallItem.descripcion = document["descripcion"].toString()
                         wallItem.precio = document["precio"].toString().toDouble()
                         wallItem.imagen = document["imagen"].toString()
                         restPlatosList.add(wallItem)
