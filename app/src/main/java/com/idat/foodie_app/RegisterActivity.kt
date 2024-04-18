@@ -38,8 +38,11 @@ class RegisterActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
                         db.collection("users").document(email).set(
                             hashMapOf("email" to email,
-                            "nombre" to username,
-                            "proveedor" to ProviderType.BASIC)
+                                "nombre" to username,
+                                "proveedor" to ProviderType.BASIC,
+                                "nacimiento" to "",
+                                "telefono" to "",
+                                "ubicacion" to "")
                         )
                         showMenuPrincipal(it.result?.user?.email ?: "", ProviderType.BASIC)
                     } else {
