@@ -109,9 +109,9 @@ class LoginActivity : AppCompatActivity() {
                                     hashMapOf("email" to email,
                                         "nombre" to username,
                                         "proveedor" to ProviderType.GOOGLE,
-                                        "nacimiento" to "",
-                                        "telefono" to "",
-                                        "ubicacion" to "")
+                                        "nacimiento" to "30/02/2004",
+                                        "telefono" to "987654321",
+                                        "ubicacion" to "Villamaria")
                                 )
                                 db.collection("users").document(email).get().addOnSuccessListener {
                                     SelectedUserStats.emailUser = it.get("email") as String
