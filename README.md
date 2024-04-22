@@ -1,5 +1,7 @@
 ## Foodie_app
 
+Lider del proyecto: Criollo Vigo, Matías Paolo
+
 Integrantes:
 
 * Criollo Vigo, Matías Paolo
